@@ -128,7 +128,7 @@ we can print several things at once by separating them with commas.
 If we imagine the variable as a sticky note with a name written on it,
 assignment is like putting the sticky note on a particular value:
 
-![Variables as Sticky Notes](img/python-sticky-note-variables-01.svg)
+![Variables as Sticky Notes](../img/python-sticky-note-variables-01.svg)
 
 This means that assigning a value to one variable does *not* change the values of other variables.
 For example,
@@ -142,7 +142,7 @@ print('weight in kilograms:', weight_kg, 'and in pounds:', weight_lb)
 weight in kilograms: 57.5 and in pounds: 126.5
 ~~~
 
-![Creating Another Variable](img/python-sticky-note-variables-02.svg)
+![Creating Another Variable](../img/python-sticky-note-variables-02.svg)
 
 and then change `weight_kg`:
 
@@ -154,7 +154,7 @@ print('weight in kilograms is now:', weight_kg, 'and weight in pounds is still:'
 weight in kilograms is now: 100.0 and weight in pounds is still: 126.5
 ~~~
 
-![Updating a Variable](img/python-sticky-note-variables-03.svg)
+![Updating a Variable](../img/python-sticky-note-variables-03.svg)
 
 Since `weight_lb` doesn't remember where its value came from,
 it isn't automatically updated when `weight_kg` changes.

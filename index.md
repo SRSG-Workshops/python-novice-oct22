@@ -19,7 +19,7 @@ But the two most important things are to use whatever language your colleagues a
 
 ## Topics
 
-*  [Python basics: Running the Python interpreter and Variables](01-basic.html)
+*  [Python basics: Running the Python interpreter and Variables](https://southampton-rsg.github.io/swc-python-novice-websci/01-basic.html)
 *  [Arrays and Lists](02-lists.html)
 *  [Repeating actions with loops](03-loops.html)
 *  [Processing data files](04-files.html)

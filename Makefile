@@ -1,87 +1,173 @@
-PANDOC ?= pandoc
-# Move smart argument to type of generation, e.g. html+smart
-# since it's changed in Matplotlib
-#PANDOC_FLAGS = --smart
-PANDOC_FLAGS =
+# Use /bin/bash instead of /bin/sh
+export SHELL = /bin/bash
 
-# R Markdown files.
-SRC_RMD = $(wildcard ??-*.Rmd)
-DST_RMD = $(patsubst %.Rmd,%.md,$(SRC_RMD))
+## ========================================
+## Commands for both workshop and lesson websites.
 
-# All Markdown files (hand-written and generated).
-ALL_MD = $(wildcard *.md) $(DST_RMD)
-EXCLUDE_MD = README.md LAYOUT.md FAQ.md DESIGN.md CONTRIBUTING.md CONDUCT.md
-SRC_MD = $(filter-out $(EXCLUDE_MD),$(ALL_MD))
-DST_HTML = $(patsubst %.md,%.html,$(SRC_MD))
+# Settings
+MAKEFILES=Makefile $(wildcard *.mk)
+JEKYLL_VERSION=3.8.5
+JEKYLL=bundle install --path .vendor/bundle && bundle update && bundle exec jekyll
+PARSER=bin/markdown_ast.rb
+DST=_site
+SLIDES_DIR=slides
+SLIDES_THEME=black
 
-# All outputs.
-DST_ALL = $(DST_HTML)
+# Check Python 3 is installed and determine if it's called via python3 or python
+# (https://stackoverflow.com/a/4933395)
+PYTHON3_EXE := $(shell which python3 2>/dev/null)
+ifneq (, $(PYTHON3_EXE))
+  ifeq (,$(findstring Microsoft/WindowsApps/python3,$(subst \,/,$(PYTHON3_EXE))))
+    PYTHON := python3
+  endif
+endif
 
-# Pandoc filters.
-FILTERS = $(wildcard tools/filters/*.py)
+ifeq (,$(PYTHON))
+  PYTHON_EXE := $(shell which python 2>/dev/null)
+  ifneq (, $(PYTHON_EXE))
+    PYTHON_VERSION_FULL := $(wordlist 2,4,$(subst ., ,$(shell python --version 2>&1)))
+    PYTHON_VERSION_MAJOR := $(word 1,${PYTHON_VERSION_FULL})
+    ifneq (3, ${PYTHON_VERSION_MAJOR})
+      $(error "Your system does not appear to have Python 3 installed.")
+    endif
+    PYTHON := python
+  else
+      $(error "Your system does not appear to have any Python installed.")
+  endif
+endif
 
-# Inclusions.
-INCLUDES = \
-	-Vheader="$$(cat _includes/header.html)" \
-	-Vbanner="$$(cat _includes/banner.html)" \
-	-Vfooter="$$(cat _includes/footer.html)" \
-	-Vjavascript="$$(cat _includes/javascript.html)"
 
-# Chunk options for knitr (used in R conversion).
-R_CHUNK_OPTS = tools/chunk-options.R
+# Controls
+.PHONY : commands clean files
 
-# Ensure that intermediate (generated) Markdown files from R are kept.
-.SECONDARY: $(DST_RMD)
+# Default target
+.DEFAULT_GOAL := commands
 
-# Default action is to show what commands are available.
-all : commands
+## I. Commands for both workshop and lesson websites
+## =================================================
 
-## check    : Validate all lesson content against the template.
-check: $(ALL_MD)
-	python tools/check.py .
+## * serve            : render website and run a local server
+serve : lesson-md lesson-slides
+	${JEKYLL} serve
 
-## clean    : Clean up temporary and intermediate files.
+## * site             : build website but do not run a server
+site : lesson-md lesson-slides
+	${JEKYLL} build
+
+## * docker-serve     : use Docker to serve the site
+docker-serve :
+	docker run --rm -it --volume ${PWD}:/srv/jekyll \
+           --volume=${PWD}/.docker-vendor/bundle:/usr/local/bundle \
+           -p 127.0.0.1:4000:4000 \
+           jekyll/jekyll:${JEKYLL_VERSION} \
+           bin/run-make-docker-serve.sh
+
+## * repo-check       : check repository settings
+repo-check :
+	@${PYTHON} bin/repo_check.py -s .
+
+## * clean            : clean up junk files
 clean :
-	@rm -rf $$(find . -name '*~' -print)
-	@rm -rf $(DST_HTML)
+	@rm -rf ${DST}
+	@rm -rf .sass-cache
+	@rm -rf bin/__pycache__
+	@rm -f ${SLIDES_HTML}
+	@rm -f ${SLIDES_DIR}/index.html
+	@find . -name .DS_Store -exec rm {} \;
+	@find . -name '*~' -exec rm {} \;
+	@find . -name '*.pyc' -exec rm {} \;
 
-## preview  : Build website locally for checking.
-preview : $(DST_ALL)
+## * clean-rmd        : clean intermediate R files (that need to be committed to the repo)
+clean-rmd :
+	@rm -rf ${RMD_DST}
+	@rm -rf fig/rmd-*
 
-# Pattern for slides (different parameters and template).
-motivation.html : motivation.md _layouts/slides.revealjs Makefile
-	${PANDOC} -s -t revealjs --slide-level 2 \
-	    ${PANDOC_FLAGS} \
-	    --template=_layouts/slides \
-	    -o $@ $<
 
-# Pattern to build a generic page.
-%.html : %.md _layouts/page.html $(FILTERS)
-	${PANDOC} -s -t html+smart \
-	    ${PANDOC_FLAGS} \
-	    --template=_layouts/page \
-	    --filter=tools/filters/blockquote2div.py \
-	    --filter=tools/filters/id4glossary.py \
-	    $(INCLUDES) \
-	    -o $@ $<
+##
+## II. Commands specific to workshop websites
+## =================================================
 
-# Pattern to convert R Markdown to Markdown.
-%.md: %.Rmd $(R_CHUNK_OPTS)
-	Rscript -e "knitr::knit('$$(basename $<)', output = '$$(basename $@)')"
+.PHONY : workshop-check
 
-## commands : Display available commands.
-commands : Makefile
-	@sed -n 's/^##//p' $<
+## * workshop-check   : check workshop homepage
+workshop-check :
+	@${PYTHON} bin/workshop_check.py .
 
-## settings : Show variables and settings.
-settings :
-	@echo 'PANDOC:' $(PANDOC)
-	@echo 'SRC_RMD:' $(SRC_RMD)
-	@echo 'DST_RMD:' $(DST_RMD)
-	@echo 'SRC_MD:' $(SRC_MD)
-	@echo 'DST_HTML:' $(DST_HTML)
 
-## unittest : Run internal tests to ensure the validator is working correctly (for Python 2 and 3).
-unittest: tools/check.py tools/validation_helpers.py tools/test_check.py
-	cd tools/ && python2 test_check.py
-	cd tools/ && python3 test_check.py
+##
+## III. Commands specific to lesson websites
+## =================================================
+
+.PHONY : lesson-check lesson-md lesson-files lesson-fixme
+
+# RMarkdown files
+RMD_SRC = $(wildcard _episodes_rmd/??-*.Rmd)
+RMD_DST = $(patsubst _episodes_rmd/%.Rmd,_episodes/%.md,$(RMD_SRC))
+
+# Lesson source files in the order they appear in the navigation menu.
+MARKDOWN_SRC = \
+  index.md \
+  CODE_OF_CONDUCT.md \
+  $(sort $(wildcard _episodes/*.md)) \
+  reference.md \
+  $(sort $(wildcard _extras/*.md)) \
+  LICENSE.md
+
+# Generated lesson files in the order they appear in the navigation menu.
+HTML_DST = \
+  ${DST}/index.html \
+  ${DST}/conduct/index.html \
+  ${DST}/setup/index.html \
+  $(patsubst _episodes/%.md,${DST}/%/index.html,$(sort $(wildcard _episodes/*.md))) \
+  ${DST}/reference/index.html \
+  $(patsubst _extras/%.md,${DST}/%/index.html,$(sort $(wildcard _extras/*.md))) \
+  ${DST}/license/index.html
+
+## * lesson-md        : convert Rmarkdown files to markdown
+lesson-md : ${RMD_DST}
+
+_episodes/%.md: _episodes_rmd/%.Rmd
+	@bin/knit_lessons.sh $< $@
+
+# * lesson-check     : validate lesson Markdown
+lesson-check : lesson-fixme
+	@${PYTHON} bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md
+
+## * lesson-check-all : validate lesson Markdown, checking line lengths and trailing whitespace
+lesson-check-all :
+	@${PYTHON} bin/lesson_check.py -s . -p ${PARSER} -r _includes/links.md -l -w --permissive
+
+## * unittest         : run unit tests on checking tools
+unittest :
+	@${PYTHON} bin/test_lesson_check.py
+
+## * lesson-files     : show expected names of generated files for debugging
+lesson-files :
+	@echo 'RMD_SRC:' ${RMD_SRC}
+	@echo 'RMD_DST:' ${RMD_DST}
+	@echo 'MARKDOWN_SRC:' ${MARKDOWN_SRC}
+	@echo 'HTML_DST:' ${HTML_DST}
+
+## * lesson-fixme     : show FIXME markers embedded in source files
+lesson-fixme :
+	@fgrep -i -n FIXME ${MARKDOWN_SRC} || true
+
+lesson-slides: ${SLIDES_DIR}/index.html
+
+.PHONY: ${SLIDES_DIR}/index.html
+${SLIDES_DIR}/index.html: ${SLIDES_DIR}/index.md
+	@cd ${SLIDES_DIR}
+	pandoc -t revealjs -s -o $@ $< -V theme=${SLIDES_THEME} --slide-level=3
+	@cd ..
+
+.PHONY: variables
+variables:
+	@echo THEME: $(THEME)
+
+##
+## IV. Auxililary (plumbing) commands
+## =================================================
+
+## * commands         : show all commands.
+commands :
+	@sed -n -e '/^##/s|^##[[:space:]]*||p' $(MAKEFILE_LIST)
