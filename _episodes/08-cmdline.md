@@ -75,6 +75,7 @@ $ python climate_analysis.py ../data/sc_climate_data_10.csv
 So we pass in the filename as argument that gets picked up and used. Handy!
 When we run it, we get the following (same as before):
 
+{: .output}
 ~~~
 Max temperature in Celsius 14.73888888888889 Kelvin 287.88888888888886
 Max temperature in Celsius 14.777777777777779 Kelvin 287.92777777777775
@@ -100,6 +101,7 @@ $ python climate_analysis.py ../data/sc_climate_data_1000.csv
 
 But wait!
 
+{: .output}
 ~~~
 Max temperature in Celsius 14.73888888888889 Kelvin 287.88888888888886
 Max temperature in Celsius 14.777777777777779 Kelvin 287.92777777777775
@@ -153,8 +155,6 @@ we get:
 
 
 {: .error}
-
-{: .error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis.py", line 5, in <module>
@@ -184,8 +184,6 @@ Now when we run it with no arguments, we get:
 
 
 {: .error}
-
-{: .error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis.py", line 5, in <module>
@@ -210,7 +208,7 @@ is clearly understood, we can simplify the output by changing the
 
 {: .python}
 ~~~
-            print(str(celsius)+", "+str(kelvin))
+print(str(celsius)+", "+str(kelvin))
 ~~~
 
 Here, we are using Python's `+` operator to **concatenate** strings
@@ -277,6 +275,7 @@ python climate_analysis.py ../data/sc_climate_data_1000.csv | head -10
 
 But whilst we get our first 10 rows as expected, we now get a really odd error as well:
 
+{: .error}
 ~~~
 ...
 Traceback (most recent call last):
