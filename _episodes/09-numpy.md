@@ -2,7 +2,7 @@
 layout: page
 title: Building programs with Python
 subtitle: Reading and analysing Patient data using libraries
-minutes: 20 
+minutes: 20
 ---
 > ## Learning Objectives {.objectives}
 >
@@ -369,7 +369,7 @@ or the average for each day?
 As the diagram below shows,
 we want to perform the operation across an axis:
 
-![Operations Across Axes](../img/python-operations-across-axes.svg)
+![Operations Across Axes](../fig/python-operations-across-axes.svg)
 
 To support this,
 most array methods allow us to specify the axis we want to work on.

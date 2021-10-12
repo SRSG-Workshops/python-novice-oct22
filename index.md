@@ -20,19 +20,17 @@ But the two most important things are to use whatever language your colleagues a
 ## Topics
 
 *  [Python basics: Running the Python interpreter and Variables](https://southampton-rsg.github.io/swc-python-novice-websci/01-basic/index.html)
-*  [Arrays and Lists](https://southampton-rsg.github.io/swc-python-novice-websci/02-lists.html)
-*  [Repeating actions with loops](https://southampton-rsg.github.io/swc-python-novice-websci/03-loops.html)
-*  [Processing data files](https://southampton-rsg.github.io/swc-python-novice-websci/04-files.html)
-*  [Making choices](https://southampton-rsg.github.io/swc-python-novice-websci/05-cond.html)
-*  [Creating functions](https://southampton-rsg.github.io/swc-python-novice-websci/06-functions.html)
-*  [Handling Errors](https://southampton-rsg.github.io/swc-python-novice-websci/07-errors.html)
-*  [Command-Line Programs](https://southampton-rsg.github.io/swc-python-novice-websci/08-cmdline.html)
-*  [Reading and analysing Patient data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/09-numpy.html)
-*  [Visualising data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/10-matplotlib.html)
-*  [Python Style Guide](https://southampton-rsg.github.io/swc-python-novice-websci/11-Python-style-guide.html)
+*  [Arrays and Lists](https://southampton-rsg.github.io/swc-python-novice-websci/02-lists/index.html)
+*  [Repeating actions with loops](https://southampton-rsg.github.io/swc-python-novice-websci/03-loops/index.html)
+*  [Processing data files](https://southampton-rsg.github.io/swc-python-novice-websci/04-files/index.html)
+*  [Making choices](https://southampton-rsg.github.io/swc-python-novice-websci/05-cond/index.html)
+*  [Creating functions](https://southampton-rsg.github.io/swc-python-novice-websci/06-functions/index.html)
+*  [Handling Errors](https://southampton-rsg.github.io/swc-python-novice-websci/07-errors/index.html)
+*  [Command-Line Programs](https://southampton-rsg.github.io/swc-python-novice-websci/08-cmdline/index.html)
+*  [Reading and analysing Patient data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/09-numpy/index.html)
+*  [Visualising data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/10-matplotlib/index.html)
+*  [Python Style Guide](https://southampton-rsg.github.io/swc-python-novice-websci/11-Python-style-guide/index.html)
 
 ## Other resources
-
-*  [Motivation](motivation.html)
-*  [Exercises](Challenges.html)
+*  [Exercises](https://southampton-rsg.github.io/swc-python-novice-websci/Challenges/index.html)
 *  [References](https://southampton-rsg.github.io/swc-python-novice-websci/reference/index.html)

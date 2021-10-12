@@ -38,7 +38,7 @@ If the test is false,
 the body of the `else` is executed instead.
 Only one or the other is ever executed:
 
-![Executing a Conditional](../img/python-flowchart-conditional.svg)
+![Executing a Conditional](../fig/python-flowchart-conditional.svg)
 
 Conditional statements don't have to necessarily include an `else`.
 If there isn't one,
@@ -73,8 +73,8 @@ else:
 sign of a number -3 is:  -1
 ~~~
 
-The keyword `elif` is short for `else if`, and is useful to avoid excessive indentation. An 
-`if ... elif ... elif ...` sequence is a substitute for the `switch` or `case` statements 
+The keyword `elif` is short for `else if`, and is useful to avoid excessive indentation. An
+`if ... elif ... elif ...` sequence is a substitute for the `switch` or `case` statements
 found in other languages.
 
 One important thing to notice in the code above is that we use a double equals sign `==` to test for equality
@@ -111,14 +111,14 @@ In this case,
 "either" means "either or both", not "either one or the other but not both".
 
 > ## How many paths? {.challenge}
-> 
+>
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
 > * A
 > * B
 > * C
 > * B and C
-> 
+>
 > ~~~ {.python}
 > if 4 > 5:
 >     print('A')
@@ -159,15 +159,15 @@ In this case,
 
 ## Another type of loop
 
-We've seen how to write loops where perhaps we know how many times we want the loop to 
+We've seen how to write loops where perhaps we know how many times we want the loop to
 execute beforehand, e.g. printing out each character in a string. So we can use
 for loops to execute a fixed operation over a known number of steps.
 
 But what if we want our loop to continue to execute until some other condition is true?
 Perhaps our code runs a simulation that generates a set of results each time through
 the loop, but we're not sure when the results will be what we want, i.e. we don't
-know how many times the loop needs to execute. For these types of cases, we can use a 
-`while` loop, which is similar to a `for` loop but exits the loop when some condition is 
+know how many times the loop needs to execute. For these types of cases, we can use a
+`while` loop, which is similar to a `for` loop but exits the loop when some condition is
 true.
 
 Consider the following example:
@@ -180,16 +180,16 @@ while number != 5:
     print(number)
 ~~~
 
-We use Python's ability to generate a random number here for clarity, but this could 
+We use Python's ability to generate a random number here for clarity, but this could
 instead be calling a function that runs another step in our simulation and returns a
 result.
 
-So in this case, our loop will continue to generate and print out random numbers between 
-and 10 while the generated number is not equal to 5. When the random number generated is 
+So in this case, our loop will continue to generate and print out random numbers between
+and 10 while the generated number is not equal to 5. When the random number generated is
 5, the loop will exit.
 
 `while` loops are a more general case of loops which are often useful (you can even
-simulate a `for` loop using a `while` loop). But you should preferably use `for` loops 
+simulate a `for` loop using a `while` loop). But you should preferably use `for` loops
 as opposed to `while` loops where you can, since they are more specific and it's more
 readable - it's easier to figure out how many times the loop will execute.
 
