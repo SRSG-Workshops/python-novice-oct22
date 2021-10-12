@@ -112,7 +112,8 @@ Traceback (most recent call last):
 NameError: name 'count' is not defined
 ~~~
 
-> ## Identifying Variable Name Errors {: .challenge}
+{: .challenge}
+> ## Identifying Variable Name Errors
 >
 > 1. Read the code below (or open the file `error_name_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message.
@@ -135,7 +136,9 @@ NameError: name 'count' is not defined
 > print(message)
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > 3 `NameError`s for `number` being misspelled, for `message` not defined, and for `a` not being in quotes.
 > >
 > > Fixed version:
@@ -248,7 +251,8 @@ it *always* means that there is a problem with how your code is indented.
 > In general, it is better to just never use tabs and always use spaces,
 > because it can make things very confusing.
 
-> ## Identifying Syntax Errors {: .challenge}
+{: .challenge}
+> ## Identifying Syntax Errors
 >
 > 1. Read the code below (or open the file `error_syntax_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. Is it a `SyntaxError` or an `IndentationError`?
@@ -264,7 +268,9 @@ it *always* means that there is a problem with how your code is indented.
 >   print("So they are usually not too hard to fix.")
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > `SyntaxError` for missing `():` at end of first line,
 > `IndentationError` for mismatch between second and third lines.
 > > A fixed version is:
@@ -319,7 +325,8 @@ Here,
 Python is telling us that there is an `IndexError` in our code,
 meaning we tried to access a list index that did not exist.
 
-> ## Identifying Index Errors {: .challenge}
+{: .challenge}
+> ## Identifying Index Errors
 >
 > 1. Read the code below, and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. What type of error is it?
@@ -332,7 +339,9 @@ meaning we tried to access a list index that did not exist.
 > print('My favorite season is ', seasons[4])
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > `IndexError`; the last entry is `seasons[3]`, so `seasons[4]` doesn't make sense.
 > > A fixed version is:
 > >
@@ -419,7 +428,8 @@ as it is possible to create custom errors.
 In that case,
 hopefully the custom error message is informative enough to help you figure out what went wrong.
 
-> ## Reading Error Messages {: .challenge}
+{: .challenge}
+> ## Reading Error Messages
 >
 > Read the python code (or open the file `error_index_ch.py` in code folder) and the resulting traceback below, and answer the following questions:
 >
@@ -463,7 +473,9 @@ hopefully the custom error message is informative enough to help you figure out 
 > KeyError: 'Friday'
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > 1. 3 levels
 > > 2. `print_message`
 > > 3. 11
@@ -533,14 +545,16 @@ Everything still seems... wait a minute!
 Since the longest axis should be 1.0, we can see this is incorrect.
 Looking at our code, line 8 should divide dy by dx.
 
-> ## Debug with a Neighbour {: .challenge}
+{: .challenge}
+> ## Debug with a Neighbour
 >
 > Take a function that you have written today, and introduce a tricky bug.
 > Your function should still run, but will give the wrong output.
 > Switch seats with your neighbor and attempt to identify - or debug - the problem
 > that they introduced into their function.
->
-> ## Not Supposed to be the Same {: .challenge}
+
+{: .challenge}
+> ## Not Supposed to be the Same
 >
 > You are assisting a researcher with Python code that computes the
 > Body Mass Index (BMI) of patients (open the file `error_silent_ch.py` in code folder).  The researcher is concerned because

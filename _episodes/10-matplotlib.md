@@ -141,12 +141,14 @@ how large we want the figure to be,
 that we're creating three sub-plots,
 and what to draw for each one.
 
-> ## Make your own plot {: .challenge}
+{: .challenge}
+> ## Make your own plot
 >
 > Create a plot showing the standard deviation of the inflammation data for each day across all patients.
 > Hint: `data.std(axis=0)` gives you standard deviation.
 
-> ## Moving plots around {: .challenge}
+{: .challenge}
+> ## Moving plots around
 >
 > Modify the program to display the three plots on top of one another instead of side by side.
 

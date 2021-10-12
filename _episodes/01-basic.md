@@ -214,7 +214,8 @@ Although we commonly refer to `variables` even in Python (because it is the comm
 >
 >
 >
->{: .challenge}
+
+{: .challenge}
 > ## Sorting out references
 >
 > What does the following program print out?

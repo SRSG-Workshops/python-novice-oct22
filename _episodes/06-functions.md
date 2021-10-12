@@ -141,7 +141,8 @@ so that we can use them inside the function.
 Inside the function,
 we use a [return statement](../../reference.html#return-statement) to send a result back to whoever asked for it.
 
-> ## Combining Strings {: .challenge}
+{: .challenge}
+> ## Combining Strings
 >
 > "Adding" two strings produces their concatenation:
 > `'a' + 'b'` is `'ab'`.
@@ -162,7 +163,9 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > *name*
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > ~~~
 > > def fence(original, wrapper):
 > >     return wrapper + original + wrapper
@@ -197,7 +200,8 @@ NameError: name 'fahr_to_celsius' is not defined
 
 And when we run it again --- which we most definitely should, to make sure it's still working as expected --- we see the same output, which is correct.
 
-> ## How do function parameters work? {: .challenge}
+{: .challenge}
+> ## How do function parameters work?
 >
 > We actually used the same variable name `fahr` in our main code and
 > and the function. But it's important to note that even though they
@@ -229,7 +233,9 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > 2. 80
 > 3. 0
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > 3 - the f and k variables defined and used within the function
 > > do not interfere with those defined outside of the function.
 > >
@@ -237,7 +243,8 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > > conflicts with variable names that are defined outside of our function
 > > that may cause it to behave incorrectly. This is known as variable scoping.
 
-> ## Does the sum of a list equal a given value? {: .challenge}
+{: .challenge}
+> ## Does the sum of a list equal a given value?
 >
 > Write a function to take a list of numbers and another value, and return
 > whether or not the sum of the list of numbers is equal to that value.
@@ -252,7 +259,9 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > is_sum_equal([2,4,6], 100)
 > False
 > ~~~
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > ~~~
 > > def is_sum_equal(number_list, sum_value):
 > >     count = 0
@@ -498,7 +507,8 @@ function, we need to prefix the function with its `temp_conversion` module name.
 
 Again, the results should be the same as before.
 
-> ## Readable Code {: .challenge}
+{: .challenge}
+> ## Readable Code
 >
 > Revise a function you wrote for one of the previous exercises to try to make
 > the code more readable. Then, collaborate with one of your neighbors

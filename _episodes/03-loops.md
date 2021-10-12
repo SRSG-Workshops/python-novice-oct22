@@ -71,7 +71,8 @@ Generally you want to have the option of easily running your Python code later, 
 
 So, much like what we did with Bash, let's take a look at writing a Python script that stores Python in a file that we can run at our leisure.
 
-> ## Programs or scripts? {: .callout}
+{: .callout}
+> ## Programs or scripts?
 >
 > The Python Software Foundation refers to Python as a 'programming language',
 > But the Python documentation, us, and many others, refer to Python programs
@@ -258,7 +259,8 @@ tin
 
 Which is really helpful, and means we don't need to remember a different way to do something else for a loop. Although, our variable names are now a bit misleading!
 
-> ## What's in a name? {: .callout}
+{: .callout}
+> ## What's in a name?
 >
 > Whilst we can name variables anything we like, it's a good idea to ensure the
 > name helps you to understand what is going on. Calling our `char` loop
@@ -344,8 +346,8 @@ and much easier to read than a two-line loop;
 it will also give us the length of many other things that we haven't met yet,
 so we should always use it when we can.
 
-
-> ## From 1 to N {: .challenge}
+{: .challenge}
+> ## From 1 to N
 >
 > Python has a built-in function called `range` that creates a list of numbers:
 > `range(3)` produces `[0, 1, 2]` (thus starting at `0` if only one parameter
@@ -364,13 +366,15 @@ so we should always use it when we can.
 > 3
 > ~~~
 >
-> > ## Solution {: .solution}
+>{: .solution}
+> > ## Solution
 > > ~~~
 > > for i in range(1, 4):
 > >    print(i)
 > > ~~~
 
-> ## Turn a String Into a List {: .challenge}
+{: .challenge}
+> ## Turn a String Into a List
 >
 > Use a for-loop to convert the string "hello" into a list of letters:
 >
@@ -388,7 +392,9 @@ so we should always use it when we can.
 > my_list = []
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > ~~~
 > > my_list = []
 > > for char in "hello":
@@ -396,7 +402,8 @@ so we should always use it when we can.
 > > print(my_list)
 > > ~~~
 
-> ## Computing powers with loops {: .challenge}
+{: .challenge}
+> ## Computing powers with loops
 >
 > Exponentiation is built into Python:
 >
@@ -409,6 +416,7 @@ so we should always use it when we can.
 >
 >Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
 
->## Reverse a string {: .challenge}
+{: .challenge}
+>## Reverse a string
 >
 > Write a loop that takes a string, and produces a new string with the characters in reverse order, so `Newton` becomes `notweN`.

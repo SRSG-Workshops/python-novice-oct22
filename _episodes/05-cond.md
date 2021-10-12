@@ -131,7 +131,8 @@ at least one test is true
 In this case,
 "either" means "either or both", not "either one or the other but not both".
 
-> ## How many paths? {: .challenge}
+{: .challenge}
+> ## How many paths?
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
@@ -151,11 +152,14 @@ In this case,
 >     print('C')
 > ~~~
 >
-> > ## Solution {: .solution}
+>
+> {: .solution}
+> > ## Solution
 > > C gets printed because the first two conditions, `4 > 5` and `4 == 5`, are not true,
 > > but `4 < 5` is true.
 
-> ## What Is Truth? {: .challenge}
+{: .challenge}
+> ## What Is Truth?
 >
 > `True` and `False` are special words in Python called `booleans`
 > which represent true and false statements.

@@ -175,8 +175,8 @@ first three characters: oxy
 last three characters: gen
 ~~~
 
->
-> ## Slicing strings {: .challenge}
+{: .challenge}
+> ## Slicing strings
 >
 > What is the value of `element[:4]`?
 > What about `element[4:]`?
@@ -401,7 +401,7 @@ myList.append(1)
 
 This works but it only works if we need to build up the list in this particular order - which most of the time you want to do anyway.
 
-> {: .challenge}
+{: .challenge}
 > ## Slicing From the End
 >
 > Use slicing to access only the last four characters of a string or entries of a list.
@@ -426,11 +426,12 @@ This works but it only works if we need to build up the list in this particular 
 > lengths)?
 > If not, try to change your approach to make it more robust.
 >
-> >{: .solution}
-> > ## Solution
-> > Use negative indices to count elements from the end of a container
-> > (such as list or string):
-> >
+ {: .solution}
+> ~~~
+> ## Solution
+> Use negative indices to count elements from the end of a container
+> (such as list or string):
+> ~~~
 > >
 > {: .python}
 > ~~~
@@ -438,7 +439,7 @@ This works but it only works if we need to build up the list in this particular 
 > > list_for_slicing[-4:]
 > > ~~~
 
-> {: .challenge}
+{: .challenge}
 > ## Overloading
 >
 > `+` usually means addition, but when used on strings or lists, it means
@@ -463,7 +464,8 @@ This works but it only works if we need to build up the list in this particular 
 > a single operator, like `+` or `*`,
 > can do different things depending on what it's applied to.
 >
-> > ## Solution {: .solution}
+> {: .solution}
+> > ## Solution
 > >
 > > The multiplication operator `*` used on a list replicates elements of the
 > > list and concatenates them together:

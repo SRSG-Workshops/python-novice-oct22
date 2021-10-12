@@ -499,7 +499,8 @@ print(data.mean(axis=1))
 
 which is the average inflammation for each patient across all days.
 
-> ## Thin slices {: .challenge}
+{: .challenge}
+> ## Thin slices
 >
 > From our previous topic, the expression `element[3:3]` produces an [empty string](../../reference.html#empty-string),
 > i.e., a string that contains no characters.
