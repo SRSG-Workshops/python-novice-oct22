@@ -19,20 +19,20 @@ But the two most important things are to use whatever language your colleagues a
 
 ## Topics
 
-*  [Python basics: Running the Python interpreter and Variables](https://southampton-rsg.github.io/swc-python-novice-websci/01-basic.html)
-*  [Arrays and Lists](02-lists.html)
-*  [Repeating actions with loops](03-loops.html)
-*  [Processing data files](04-files.html)
-*  [Making choices](05-cond.html)
-*  [Creating functions](06-functions.html)
-*  [Handling Errors](07-errors.html)
-*  [Command-Line Programs](08-cmdline.html)
-*  [Reading and analysing Patient data using libraries](09-numpy.html)
-*  [Visualising data using libraries](10-matplotlib.html)
-*  [Python Style Guide](11-Python-style-guide.html)
+*  [Python basics: Running the Python interpreter and Variables](https://southampton-rsg.github.io/swc-python-novice-websci/01-basic/index.html)
+*  [Arrays and Lists](https://southampton-rsg.github.io/swc-python-novice-websci/02-lists.html)
+*  [Repeating actions with loops](https://southampton-rsg.github.io/swc-python-novice-websci/03-loops.html)
+*  [Processing data files](https://southampton-rsg.github.io/swc-python-novice-websci/04-files.html)
+*  [Making choices](https://southampton-rsg.github.io/swc-python-novice-websci/05-cond.html)
+*  [Creating functions](https://southampton-rsg.github.io/swc-python-novice-websci/06-functions.html)
+*  [Handling Errors](https://southampton-rsg.github.io/swc-python-novice-websci/07-errors.html)
+*  [Command-Line Programs](https://southampton-rsg.github.io/swc-python-novice-websci/08-cmdline.html)
+*  [Reading and analysing Patient data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/09-numpy.html)
+*  [Visualising data using libraries](https://southampton-rsg.github.io/swc-python-novice-websci/10-matplotlib.html)
+*  [Python Style Guide](https://southampton-rsg.github.io/swc-python-novice-websci/11-Python-style-guide.html)
 
 ## Other resources
 
 *  [Motivation](motivation.html)
 *  [Exercises](Challenges.html)
-*  [References](../../reference.html)
+*  [References](https://southampton-rsg.github.io/swc-python-novice-websci/reference/index.html)
