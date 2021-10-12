@@ -67,6 +67,7 @@ the structure of your own data, you may find you end up doing this a lot!
 
 So now we get:
 
+{: .output}
 ~~~
 Max temperature in Celsius 14.73888888888889
 Max temperature in Celsius 14.777777777777779
