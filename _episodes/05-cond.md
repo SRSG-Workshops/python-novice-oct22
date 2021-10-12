@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Making choices
+title: Making choices
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}

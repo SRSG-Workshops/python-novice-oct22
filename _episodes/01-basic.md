@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Python Basics - Running the Python interpreter, Variables
+title: Python Basics
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}

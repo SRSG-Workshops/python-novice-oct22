@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Handling Errors
-subtitle: How to deal with problems in your code
 minutes: 30
 ---
 
@@ -532,9 +531,9 @@ the behaviour of our code continues to be correct.
 We also automate this process, and there are ways to do this, which are
 beyond the scope of this course.
 
-If you're interested, look up [unit testing](https://en.wikipedia.org/wiki/Unit_testing) 
+If you're interested, look up [unit testing](https://en.wikipedia.org/wiki/Unit_testing)
 in general, and for Python,
-you can look at [Nose](http://nose.readthedocs.io/en/latest/) and 
+you can look at [Nose](http://nose.readthedocs.io/en/latest/) and
 [PyTest](http://doc.pytest.org/en/latest/)
 which are examples of tools used to write tests in an easy to use way.
 

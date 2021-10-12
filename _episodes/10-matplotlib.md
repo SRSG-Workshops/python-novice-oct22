@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Data Visualisation
+title: Data Visualisation
 minutes: 5
 ---
 > ## Learning Objectives {.objectives}

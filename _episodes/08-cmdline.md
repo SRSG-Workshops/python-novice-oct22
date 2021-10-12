@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Command-Line Programs
+title: Command-Line Programs
 minutes: 10
 ---
 > ## Learning Objectives {.objectives}
@@ -24,10 +23,10 @@ data file, which is **hardcoded** into the script. Like with functions, we'd
 ideally want to be able to pass in the filename to process as a parameter. Then,
 we can run the script on any data file we like.
 
-Fortunately, Python can handle **command line arguments**, which we've already 
+Fortunately, Python can handle **command line arguments**, which we've already
 seen in our Bash lesson. In Python, arguments are passed
-to our script in the list `sys.argv[]` which we can use. This feature is provided 
-by the Python standard `sys` library, so similarly to how we imported our 
+to our script in the list `sys.argv[]` which we can use. This feature is provided
+by the Python standard `sys` library, so similarly to how we imported our
 temperature conversion functions, we need to import the `sys` library.
 
 The first argument (`sys.argv[0]`) always contains the name of the script,
@@ -61,7 +60,7 @@ for line in climate_data:
             print('Max temperature in Celsius', celsius, 'Kelvin', kelvin)
 ~~~
 
-And if we run that from the shell, with 
+And if we run that from the shell, with
 
 ~~~ {.bash}
 $ python climate_analysis.py ../data/sc_climate_data_10.csv
@@ -109,7 +108,7 @@ Max temperature in Celsius 16.077777777777776 Kelvin 289.22777777777776
 ...
 ~~~
 
-What's this `-5572.777777777778`? If we look at our 
+What's this `-5572.777777777778`? If we look at our
 `sc_climate_data_1000.csv` file, we can see there are some maximum
 temperature values of -9999. As it turns out, this value represents
 an invalid temperature reading!
@@ -117,7 +116,7 @@ an invalid temperature reading!
 This is a consequence of dealing with real data, and sometimes we need
 to be able to deal with anomalies such as this. In particular, we
 should make sure we fully understand the data we are using, and what
-it means. Otherwise, we run the risk of making assumptions and 
+it means. Otherwise, we run the risk of making assumptions and
 processing the data incorrectly.
 
 In this case, we can fix our code by adding in a condition
@@ -161,7 +160,7 @@ script = sys.argv[0]
 assert len(sys.argv) == 2, script + ": requires filename"
 ~~~
 
-Here, we use the Python `assert` statement, which accepts a condition and a 
+Here, we use the Python `assert` statement, which accepts a condition and a
 string to output if the condition is false, to **assert** that we have only
 2 arguments. If not, an error message is displayed.
 
@@ -174,7 +173,7 @@ Traceback (most recent call last):
 AssertionError: climate_analysis.py: requires filename
 ~~~
 
-More helpful! We could make this even more helpful by providing more 
+More helpful! We could make this even more helpful by providing more
 information about the file that is required.
 
 ## Using our script in a pipeline
@@ -192,7 +191,7 @@ is clearly understood, we can simplify the output by changing the
             print(str(celsius)+", "+str(kelvin))
 ~~~
 
-Here, we are using Python's `+` operator to **concatenate** strings 
+Here, we are using Python's `+` operator to **concatenate** strings
 together, so we can get output such as `20.561111111111114, 293.7111111111111`.
 
 We could run the script now in a pipeline, for example, to get the last
@@ -233,7 +232,7 @@ and we won't cover it here.
 > Instead,
 > we should use Python's `argparse` library,
 > which handles common cases in a systematic way,
-> and also makes it easy for us to provide sensible error messages for our 
+> and also makes it easy for us to provide sensible error messages for our
 > users.
 
 ## Dealing with pipeline errors
@@ -260,10 +259,10 @@ BrokenPipeError: [Errno 32] Broken pipe
 This is an odd consequence of using Python in a command line pipeline ---
 it doesn't cope with piping output to other commands very well. In essence, `head` gets
 the first 10 lines it needs and terminates the pipe prematurely, before our program has
-finished piping its output, which can cause this error. But it only happens on 
+finished piping its output, which can cause this error. But it only happens on
 Linux and Mac platforms!
 
-We can fix this on these platforms by including the following at the top, after our 
+We can fix this on these platforms by including the following at the top, after our
 `temp_conversion` import (*see `climate_analysis-13.py`*):
 
 ~~~ {.python}

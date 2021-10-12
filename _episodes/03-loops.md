@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Repeating actions using loops
+title: Repeating actions using loops
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}
@@ -50,8 +49,8 @@ Imagine that we wanted to number this list so that we printed:
 10. I love programming in Python!
 ~~~
 
-Now, the times operator `*` is no longer capable of allowing us to produce this output. Fortunately, 
-Python provides us with multiple general tools for repetition where we'll simply specify which statements 
+Now, the times operator `*` is no longer capable of allowing us to produce this output. Fortunately,
+Python provides us with multiple general tools for repetition where we'll simply specify which statements
 we want to be repeated and a way to determine how many times to repeat those statements.
 
 To do that, we'll have to teach the computer how to repeat things.
@@ -65,21 +64,21 @@ Generally you want to have the option of easily running your Python code later, 
 So, much like what we did with Bash, let's take a look at writing a Python script that stores Python in a file that we can run at our leisure.
 
 > ## Programs or scripts? {.callout}
-> 
+>
 > The Python Software Foundation refers to Python as a 'programming language',
 > But the Python documentation, us, and many others, refer to Python programs
 > as 'scripts'. So is Python a scripting language or a programming language?
 > The answer is YES.
 >
-> Traditionally, languages are either interpreted (like Bash) or compiled (like 
+> Traditionally, languages are either interpreted (like Bash) or compiled (like
 > C). The former type were scripting languages, and the latter were programming
 > languages. But more recently, the lines are beginning to blur.
-> 
+>
 > Python can be both! You can compile Python, but you don't need to.
 > In addition, Python can fulfil the role of a scripting language in similar
 > ways to Bash, including that it's source code can be run on a multitude
 > of supporting platforms without needing to be explicitly compiled. But it
-> can also go much further, and it's designed so you can pretty much write 
+> can also go much further, and it's designed so you can pretty much write
 > anything with it.
 >
 > For that reason, it's considered a programming language, but to add to the
@@ -203,10 +202,10 @@ for variable in collection:
     do things with variable
 ~~~
 
-We can call the [loop variable](../../reference.html#loop-variable) anything we 
+We can call the [loop variable](../../reference.html#loop-variable) anything we
 like, but there must be a colon at the end of the line starting the loop,
-and we must indent the body of the loop. Unlike many other languages, there is 
-no command to end a loop (e.g. end for); what is indented after the for 
+and we must indent the body of the loop. Unlike many other languages, there is
+no command to end a loop (e.g. end for); what is indented after the for
 statement belongs to the loop.
 
 The great thing about Python is that the simplicity of how it handles loops
@@ -228,9 +227,9 @@ tin
 Which is really helpful, and means we don't need to remember a different way to do something else for a loop. Although, our variable names are now a bit misleading!
 
 > ## What's in a name? {.callout}
-> 
+>
 > Whilst we can name variables anything we like, it's a good idea to ensure the
-> name helps you to understand what is going on. Calling our `char` loop 
+> name helps you to understand what is going on. Calling our `char` loop
 > variable earlier `x` may still be clear in that small script, but if our loop
 > were quite large (and/or more complex, with other similarly named variables)
 > it would become difficult to understand. So pick something that's meaningful

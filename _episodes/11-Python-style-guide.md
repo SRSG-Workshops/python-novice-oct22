@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Python Style Guide
+title: Python Style Guide
 minutes: 5
 ---
 
@@ -9,7 +8,7 @@ minutes: 5
 >
 > * Python coding conventions
 
-This is taken from [PEP-008: Python Style Guide](https://www.python.org/dev/peps/pep-0008/). 
+This is taken from [PEP-008: Python Style Guide](https://www.python.org/dev/peps/pep-0008/).
 It is a semi-official guide to Python coding conventions.
 
 We should stick to this unless we have hard data that proves something else is better.
@@ -40,9 +39,9 @@ Here are some basic python style rules listed in a table below:
 | Use `isinstance` when checking types | `if isinstance(current, Rock):` | `if type(current) == Rock:` |
 
 <p align="center">
-     <strong>Table 8.1: Basic Python Style Rules </strong>                                                
-</p>     
+     <strong>Table 8.1: Basic Python Style Rules </strong>
+</p>
 
-             
+
 
 

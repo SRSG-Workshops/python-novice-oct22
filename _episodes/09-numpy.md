@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Reading and analysing Patient data using libraries
+title: Reading and analysing Patient data using libraries
 minutes: 20
 ---
 > ## Learning Objectives {.objectives}

@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Modularising your code using functions
+title: Modularising your code using functions
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}
@@ -10,11 +9,11 @@ minutes: 15
 > *   Return a value from a function.
 > *   Understand the scope of function variables and parameters.
 > *   Documenting a function.
-> *   Understand why we should divide programs into small, single-purpose 
+> *   Understand why we should divide programs into small, single-purpose
 >     functions.
 > *   Define and use a module that contains functions.
 
-At this point, we've written some scripts to do various things, including one to 
+At this point, we've written some scripts to do various things, including one to
 loop through a data file and output its contents.
 But it's not hard to imagine our code getting more complicated as we add
 more features.
@@ -23,15 +22,15 @@ We'll see how we can amend our code to be better structured to further increase 
 
 ### Converting from Fahrenheit to Celsius
 
-Let's look at adding a feature to our code to perform a conversion 
+Let's look at adding a feature to our code to perform a conversion
 from Fahrenheit to Celsius on the temperature data we are looking at:
 
 ~~~ {.python}
 celsius = ((data[3] - 32) * (5/9))
 ~~~
 
-Now this wouldn't work as it is - we can't just apply this formula directly to 
-`data[3]` since it's a string. We need to convert it to a number first. To be 
+Now this wouldn't work as it is - we can't just apply this formula directly to
+`data[3]` since it's a string. We need to convert it to a number first. To be
 specific, a floating point number.
 
 Fortunately, Python has some built-in functions to do these `type` conversions
@@ -56,8 +55,8 @@ for line in climate_data:
         print('Max temperature in Celsius', celsius)
 ~~~
 
-So we first convert our `data[3]` value to a floating point number using 
-`float()`, then we are free to use it in our conversion formula. Depending on 
+So we first convert our `data[3]` value to a floating point number using
+`float()`, then we are free to use it in our conversion formula. Depending on
 the structure of your own data, you may find you end up doing this a lot!
 
 So now we get:
@@ -77,9 +76,9 @@ Max temperature in Celsius 16.33888888888889
 
 ### Modularising conversion code into a function
 
-Whilst this is a simple calculation, there are many things we may want to do 
-that are more complex. What is essentially a single task may require a number of 
-lines of code to accomplish it, and with many of these our code could become 
+Whilst this is a simple calculation, there are many things we may want to do
+that are more complex. What is essentially a single task may require a number of
+lines of code to accomplish it, and with many of these our code could become
 quite messy. And if we'd like to reuse that code elsewhere, we'd have to copy
 it.
 
@@ -90,7 +89,7 @@ wanted to update how we accomplished that task, which can introduce errors.
 And if errors already exist in our original code, we would have to correct all
 copies, which would become a code maintenance nightmare.
 
-We'd ideally like a way to package our code succinctly, so we only need to 
+We'd ideally like a way to package our code succinctly, so we only need to
 change it in one place, and so that it is easier to reuse.
 Python provides for this by letting us define things called 'functions' -
 a shorthand way of re-executing pieces of code.
@@ -103,7 +102,7 @@ climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 def fahr_to_celsius(fahr):
     # apply standard Fahrenheit to Celsius formula
-    celsius = ((fahr - 32) * (5/9)) 
+    celsius = ((fahr - 32) * (5/9))
     return celsius
 
 for line in climate_data:
@@ -138,7 +137,7 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 >
 > "Adding" two strings produces their concatenation:
 > `'a' + 'b'` is `'ab'`.
-> Write a short function called `fence` that takes two parameters called 
+> Write a short function called `fence` that takes two parameters called
 > `original` and `wrapper` and returns a new string that has the wrapper
 > character at the beginning and end of the original.
 > A call to your function should look like this:
@@ -158,14 +157,14 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > > ~~~
 
 > ## How large should functions be? {.callout}
-> 
-> We use functions to define a big task in terms of smaller ones. This helps 
+>
+> We use functions to define a big task in terms of smaller ones. This helps
 > to make our code more readable, as well as allowing us to more easily
 > reuse and maintain that code.
-> 
+>
 > The trick when writing functions is to ensure they don't themselves become
 > unmanageable, and it's very easy to write large functions. So when your
-> function starts getting large, consider decomposing it further into separate 
+> function starts getting large, consider decomposing it further into separate
 > functions. There's no hard and fast rule for when a function is too 'large'
 > --- some say 15-20 lines, some say no more than a page long. But in general,
 > think about how complex it is to understand, generally how readable
@@ -185,17 +184,17 @@ NameError: name 'fahr_to_celsius' is not defined
 And when we run it again --- which we most definitely should, to make sure it's still working as expected --- we see the same output, which is correct.
 
 > ## How do function parameters work? {.challenge}
-> 
+>
 > We actually used the same variable name `fahr` in our main code and
 > and the function. But it's important to note that even though they
 > share the same name, they don't refer to the same thing. This is
 > because of variable **scoping**.
-> 
-> Within a function, any variables that are created (such as parameters 
+>
+> Within a function, any variables that are created (such as parameters
 > or other variables), only exist within the **scope** of the function.
-> 
+>
 > For example, what would be the output from the following:
-> 
+>
 > ~~~ {.python}
 > f = 0
 > k = 0
@@ -276,7 +275,7 @@ climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 def fahr_to_celsius(fahr):
     # apply standard Fahrenheit to Celsius formula
-    celsius = ((fahr - 32) * (5/9)) 
+    celsius = ((fahr - 32) * (5/9))
     return celsius
 
 def fahr_to_kelvin(fahr):
@@ -311,19 +310,19 @@ Similarly,
 while a lot of powerful tools are built into languages like Python,
 even more live in the [libraries](../../reference.html#software-library) they are used to build.
 
-A library is a collection of code (precompiled routines, functions) that a program can use. They are particularly 
-useful for storing frequently used routines because you don't need to explicitly link them to every program 
+A library is a collection of code (precompiled routines, functions) that a program can use. They are particularly
+useful for storing frequently used routines because you don't need to explicitly link them to every program
 that uses them. Libraries will be automatically looked for routines that are not found elsewhere.
 
 So we can go one step further to improve the structure of our
 code. We can separate out the two functions and have them in a separate
 Python module (or library) which we can use.
 
-Create a new file called 
-`temp_conversion.py` and copy and paste those two functions into it, then 
-save it, and remove those functions from the original `climate_analysis.py` 
-script and save that. We'll see how to use those library functions 
-shortly. But first, let's take this opportunity to improve our 
+Create a new file called
+`temp_conversion.py` and copy and paste those two functions into it, then
+save it, and remove those functions from the original `climate_analysis.py`
+script and save that. We'll see how to use those library functions
+shortly. But first, let's take this opportunity to improve our
 documentation of those functions!
 
 The usual way to put documentation in software is to add comments, as
@@ -342,7 +341,7 @@ def fahr_to_celsius(fahr):
     Arguments:
     fahr -- the temperature in Fahrenheit
     """
-    celsius = ((fahr - 32) * (5/9)) 
+    celsius = ((fahr - 32) * (5/9))
     return celsius
 
 def fahr_to_kelvin(fahr):
@@ -366,13 +365,13 @@ So how would we use this module and its functions in code?
 We do this by `import`ing the module into Python.
 
 ~~~ {.python}
-Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41) 
+Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41)
 [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
 >>> import temp_conversion
 ~~~
 
-When modules and functions are described in docstrings, we can ask for these 
+When modules and functions are described in docstrings, we can ask for these
 explanations directly from the interpreter which can be useful. Following on
 from the above:
 
@@ -391,17 +390,17 @@ NAME
 FUNCTIONS
     fahr_to_celsius(fahr)
         Convert Fahrenheit to Celsius.
-        
+
         Uses standard Fahrenheit to Celsius formula
-        
+
         Arguments:
         fahr -- the temperature in Fahrenheit
-    
+
     fahr_to_kelvin(fahr)
         Convert Fahrenheight to Kelvin.
-        
+
         Uses standard Fahrenheit to Kelvin formula
-        
+
         Arguments:
         fahr -- the temperature in Fahrenheit
 
@@ -429,14 +428,14 @@ Help on function fahr_to_celsius in module temp_conversion:
 
 fahr_to_celsius(fahr)
     Convert Fahrenheit to Celsius.
-    
+
     Uses standard fahrenheit to Celsius formula
-    
+
     Arguments:
     fahr -- the temperature in Fahrenheit
 ~~~
 
-And then we need to `import` that function from our module into our script, so 
+And then we need to `import` that function from our module into our script, so
 we can use it (*see `climate_analysis-8.py`*).
 
 ~~~ {.python}
@@ -469,6 +468,6 @@ Again, the results should be the same as before.
 >
 > Revise a function you wrote for one of the previous exercises to try to make
 > the code more readable. Then, collaborate with one of your neighbors
-> to critique each other's functions and discuss how your function 
+> to critique each other's functions and discuss how your function
 > implementations
 > could be further improved to make them more readable.

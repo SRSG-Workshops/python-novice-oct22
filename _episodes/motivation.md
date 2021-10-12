@@ -1,7 +1,6 @@
 ---
 layout: episode
-title: Building programs with Python
-subtitle: Why Python?
+title: Why Python?
 ---
 
 ## Why Python?

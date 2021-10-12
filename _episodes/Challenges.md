@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Challenges
+title: Challenges
 ---
 
 >## Python basics: Variables, Objects, Arrays, Lists etc
@@ -133,14 +132,14 @@ subtitle: Challenges
 >## Making choices
 
 > #### How many paths? {.challenge}
-> 
+>
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
 > * A
 > * B
 > * C
 > * B and C
-> 
+>
 > ~~~ {.python}
 > if 4 > 5:
 >     print('A')
@@ -181,7 +180,7 @@ subtitle: Challenges
 >
 > "Adding" two strings produces their concatenation:
 > `'a' + 'b'` is `'ab'`.
-> Write a short function called `fence` that takes two parameters called 
+> Write a short function called `fence` that takes two parameters called
 > `original` and `wrapper` and returns a new string that has the wrapper
 > character at the beginning and end of the original.
 > A call to your function should look like this:
@@ -195,17 +194,17 @@ subtitle: Challenges
 > ~~~
 
 > ## How do function parameters work? {.challenge}
-> 
+>
 > We actually used the same variable name `fahr` in our main code and
 > and the function. But it's important to note that even though they
 > share the same name, they don't refer to the same thing. This is
 > because of variable **scoping**.
-> 
-> Within a function, any variables that are created (such as parameters 
+>
+> Within a function, any variables that are created (such as parameters
 > or other variables), only exist within the **scope** of the function.
-> 
+>
 > For example, what would be the output from the following:
-> 
+>
 > ~~~ {.python}
 > f = 0
 > k = 0
@@ -247,7 +246,7 @@ subtitle: Challenges
 >
 > Revise a function you wrote for one of the previous exercises to try to make
 > the code more readable. Then, collaborate with one of your neighbors
-> to critique each other's functions and discuss how your function 
+> to critique each other's functions and discuss how your function
 > implementations
 > could be further improved to make them more readable.
 
@@ -398,14 +397,14 @@ subtitle: Challenges
 >## Making choices
 
 > #### How many paths? {.challenge}
-> 
+>
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
 > * A
 > * B
 > * C
 > * B and C
-> 
+>
 > ~~~ {.python}
 > if 4 > 5:
 >     print('A')

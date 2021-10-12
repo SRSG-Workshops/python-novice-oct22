@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Processing data files
+title: Processing data files
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}
@@ -18,7 +17,7 @@ temperature conversions on our CSV data file.
 We'll start out by looking at how to read the data file and print
 its contents in a script, and then modify our script to perform
 some conversions and output that.
-Along the way, we'll see how we can make our code more understandable to 
+Along the way, we'll see how we can make our code more understandable to
 others (as well as ourselves, when we might come back to it at a later date).
 
 <!-- ** Mention CSV specific library -->
@@ -89,7 +88,7 @@ that works on strings. We can use it like:
 So what's happening here?
 
 > ## Python and object orientation - in a nutshell {.callout}
-> 
+>
 > So far we've used strings, which are a type of object in Python.
 > In general, an object is an instance of something called a class.
 >
@@ -104,7 +103,7 @@ So what's happening here?
 > and so forth - these things could be defined as classes. And for
 > each of these, they would have their own properties and methods. A wheel class
 > for example, could have diameter and width as properties, and a window
-> could have size, tint and shape and properties, and assuming it's an 
+> could have size, tint and shape and properties, and assuming it's an
 > electric window, it could have up() and down() as methods to raise
 > and lower the window. A class can have as many properties and methods
 > as we choose to define for it.
@@ -118,7 +117,7 @@ So what's happening here?
 > that window to lower, but only that window.
 >
 > So, in our example, `line` is a String object, an instance of a String class.
-> And that String class has a defined method called `rstrip()`, which 
+> And that String class has a defined method called `rstrip()`, which
 > removes the trailing newline. There are many other String methods which
 > are incredibly useful!
 
@@ -166,7 +165,7 @@ on a string object. Well, we use `split()` in exactly the same way:
     data = line.split(',')
 ~~~
 
-Although in this case, we're capturing the returned list from `split()` into a 
+Although in this case, we're capturing the returned list from `split()` into a
 variable called `data`. We can access elements in that list as before.
 
 So, let's change our code accordingly (*see `climate_analysis-3.py`*):
@@ -181,25 +180,25 @@ for line in climate_data:
     print('Max temperature', data[3])
 ~~~
 
-Now, it's important to remember that the column we want, the maximum 
-temperature, is the 4th column. But in Python list indexes start at 0, so in 
-fact we need to obtain the value from `data[3]` and **not** `data[4]`. So, we 
+Now, it's important to remember that the column we want, the maximum
+temperature, is the 4th column. But in Python list indexes start at 0, so in
+fact we need to obtain the value from `data[3]` and **not** `data[4]`. So, we
 have made a note to that effect in a *comment*.
 
 > ## How and when should you add a comment? {.callout}
-> 
+>
 > The trick is to keep your audience in mind when writing code --- this could
 > be someone else in the lab, or perhaps someone in another institution. A
 > good rule of thumb is to assume that someone will **always** read your code
 > at a later date, and this includes a future version of yourself. It can be
 > easy to forget why you did something a particular way in six months time.
-> 
+>
 > Which leads to a good point about comments: generally, they should explain
 > the **why**. In most cases, the code already explains the **how**, so if
 > something could be considered unclear, add a comment.
-> 
-> A [good philosophy on code comments](http://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/) is that **the best kind of comments are 
-> the ones you don't need**. You should write your code so it's easier to 
+>
+> A [good philosophy on code comments](http://blog.codinghorror.com/code-tells-you-how-comments-tell-you-why/) is that **the best kind of comments are
+> the ones you don't need**. You should write your code so it's easier to
 > understand without comments first, and only add comments when it **cannot**
 > be made easier to understand.
 

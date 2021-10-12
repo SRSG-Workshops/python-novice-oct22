@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Building programs with Python
-subtitle: Arrays, Lists etc
+title: Arrays, Lists etc
 minutes: 15
 ---
 > ## Learning Objectives {.objectives}
