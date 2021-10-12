@@ -423,8 +423,9 @@ This works but it only works if we need to build up the list in this particular 
 > (e.g. if you wanted to apply the solution to a set of lists of different
 > lengths)?
 > If not, try to change your approach to make it more robust.
->
- {: .solution}
+
+
+{: .solution}
 > ~~~
 > ## Solution
 > Use negative indices to count elements from the end of a container
