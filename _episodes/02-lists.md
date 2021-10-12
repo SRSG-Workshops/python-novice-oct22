@@ -401,7 +401,8 @@ myList.append(1)
 
 This works but it only works if we need to build up the list in this particular order - which most of the time you want to do anyway.
 
-> ## Slicing From the End {: .challenge}
+> {: .challenge}
+> ## Slicing From the End
 >
 > Use slicing to access only the last four characters of a string or entries of a list.
 >
@@ -413,8 +414,8 @@ This works but it only works if we need to build up the list in this particular 
 > ~~~
 >
 >
-{: .output}
-~~~
+> {: .output}
+> ~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
@@ -425,7 +426,8 @@ This works but it only works if we need to build up the list in this particular 
 > lengths)?
 > If not, try to change your approach to make it more robust.
 >
-> > ## Solution {: .solution}
+> >{: .solution}
+> > ## Solution
 > > Use negative indices to count elements from the end of a container
 > > (such as list or string):
 > >
@@ -436,7 +438,8 @@ This works but it only works if we need to build up the list in this particular 
 > > list_for_slicing[-4:]
 > > ~~~
 
-> ## Overloading {: .challenge}
+> {: .challenge}
+> ## Overloading
 >
 > `+` usually means addition, but when used on strings or lists, it means
 > "concatenate".

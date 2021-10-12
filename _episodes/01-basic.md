@@ -197,8 +197,8 @@ This is different from the way spreadsheets work.
 
 Although we commonly refer to `variables` even in Python (because it is the common terminology), we really mean `names` or `identifiers`. In Python, `variables` are name tags for values, not labelled boxes.
 
-
-> ## What's inside the box? {: .challenge}
+{: .challenge}
+> ## What's inside the box?
 >
 > Draw diagrams showing what variables refer to what values after each statement
 > in the following program:
@@ -211,8 +211,11 @@ Although we commonly refer to `variables` even in Python (because it is the comm
 > weight = weight * 1.14
 > age = age + 20
 > ~~~
-
-> ## Sorting out references {: .challenge}
+>
+>
+>
+>{: .challenge}
+> ## Sorting out references
 >
 > What does the following program print out?
 >
