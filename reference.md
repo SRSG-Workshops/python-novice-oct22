@@ -1,7 +1,6 @@
 ---
 layout: page
-title: Programming with Python
-subtitle: Reference
+title: Reference
 ---
 ## [Analyzing Patient Data](01-numpy.html)
 
@@ -82,7 +81,7 @@ additive color model
     such as [red, green, and blue](#rgb).
 
 argument
-:   A value given to a function or program when it runs. 
+:   A value given to a function or program when it runs.
     The term is often used interchangeably (and inconsistently) with [parameter](#parameter).
 
 assertion
@@ -123,7 +122,7 @@ conditional statement
 :   A statement in a program that might or might not be executed
     depending on whether a test is true or false.
 
-comma-separated values 
+comma-separated values
 :   (CSV) A common textual representation for tables
     in which the values in each row are separated by commas.
 
@@ -313,7 +312,7 @@ type
     as a kind of number (e.g. [floating-point](#float), [integer](#integer)), [string](#string), or something else.
 
 type of error
-:   CHECKME Indicates the nature of an error in a program, for example, `IOError` in Python refers to problems in input/output. 
+:   CHECKME Indicates the nature of an error in a program, for example, `IOError` in Python refers to problems in input/output.
     See also [syntax error](#syntax-error).
 
 while loop
