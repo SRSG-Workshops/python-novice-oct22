@@ -22,6 +22,7 @@ each row holds information for a single patient,
 and the columns represent successive days.
 The first few rows of our first file look like this:
 
+{: .output}
 ~~~
 0,0,1,3,1,2,4,7,8,3,3,3,10,5,7,4,7,7,12,18,6,13,11,11,7,7,4,6,8,8,4,4,5,7,3,4,2,3,0,0
 0,1,2,1,2,1,3,2,2,6,10,11,5,9,4,4,7,16,8,6,18,4,12,5,12,7,11,5,11,3,3,5,4,4,5,5,1,1,0,1
@@ -51,6 +52,7 @@ $ pwd
 
 And we should see:
 
+{: .output}
 ~~~
 /Users/nelle/2015-12-15-southampton/novice/python
 ~~~
