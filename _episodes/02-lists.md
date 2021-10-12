@@ -65,7 +65,7 @@ Which will print first and last elements, i.e. value 1 and 15 in this case.
 first and last: 1 15
 ~~~
 
-*See slide [Indexing a List Example I](motivation.html#indexing-a-list-example-i)*.
+*See slide [Indexing a List Example I](https://southampton-rsg.github.io/swc-python-novice-websci/motivation/index.html#indexing-a-list-example-i)*.
 
 Similarly to change the seventh element we can
 assign directly to it:
@@ -74,7 +74,7 @@ assign directly to it:
 odds[6] = 13
 ~~~
 
-*See slide [Indexing a List Example II](motivation.html#indexing-a-list-example-ii)*.
+*See slide [Indexing a List Example II](https://southampton-rsg.github.io/swc-python-novice-websci/motivation/index.html#indexing-a-list-example-ii)*.
 
 ### Slicing
 
@@ -88,7 +88,7 @@ odds[2:5]
 [5, 7, 9]
 ~~~
 
-*See slide [Slicing a List Example I](motivation.html#slicing-a-list-example-i)*.
+*See slide [Slicing a List Example I](https://southampton-rsg.github.io/swc-python-novice-websci/motivation/index.html#slicing-a-list-example-i)*.
 
 is a sublist from the third element to the fifth i.e. from `odds[2]` to `odds[4]`. Notice that the
 final element specified i.e. `[5]` is not included in the slice.
@@ -137,7 +137,7 @@ print('first three characters:', element[0:3])
 print('last three characters:', element[3:6])
 ~~~
 
-*See slide [Slicing a List Example II](motivation.html#slicing-a-list-example-ii)*.
+*See slide [Slicing a List Example II](https://southampton-rsg.github.io/swc-python-novice-websci/motivation/index.html#slicing-a-list-example-ii)*.
 
 ~~~ {.output}
 first three characters: oxy
