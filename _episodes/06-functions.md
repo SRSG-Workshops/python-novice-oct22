@@ -157,9 +157,8 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > print(fence('name', '*'))
 > ~~~
 >
->
-{: .output}
-~~~
+> {: .output}
+> ~~~
 > *name*
 > ~~~
 >
