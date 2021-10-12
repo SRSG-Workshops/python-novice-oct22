@@ -1,5 +1,5 @@
 ---
-layout: slides
+layout: episode
 title: Building programs with Python
 subtitle: Why Python?
 ---
