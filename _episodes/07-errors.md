@@ -181,6 +181,7 @@ def some_function()
      return msg
 ~~~
 
+{: .error}
 ~~~
   File "<stdin>", line 1
     def some_function()
@@ -206,6 +207,7 @@ def some_function():
      return msg
 ~~~
 
+{: .error}
 ~~~
   File "<stdin>", line 4
     return msg
@@ -238,6 +240,7 @@ it *always* means that there is a problem with how your code is indented.
 >     return msg
 > ~~~
 >
+> {: .error}
 > ~~~
 >  File "hello_world.py", line 4
 >    return msg
@@ -462,6 +465,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > print_friday_message()
 > ~~~
 >
+> {: .error}
 > ~~~
 > Traceback (most recent call last):
 >   File "test.py", line 18, in <module>
@@ -578,12 +582,13 @@ Looking at our code, line 8 should divide dy by dx.
 >
 >
 {: .output}
-~~~
+> ~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
 > ~~~
 >
+> {: .solution}
 > > ## Solution
 > > * The loop is not being utilised correctly. `height` and `weight` are always
 > >   set as the first patient's data during each iteration of the loop.
