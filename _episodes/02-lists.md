@@ -378,9 +378,6 @@ myList[2]=1
 
 only to discover that this doesn't work because we can't assign to a list element that doesn't already exist.
 
-
-{: .error}
-
 {: .error}
 ~~~
 Traceback (most recent call last):
