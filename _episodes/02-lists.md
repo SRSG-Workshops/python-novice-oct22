@@ -467,7 +467,7 @@ This works but it only works if we need to build up the list in this particular 
 > > list and concatenates them together:
 > >
 > >
->> {: .output}
+> > {: .output}
 > > ~~~
 > > [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
 > > ~~~
