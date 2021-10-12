@@ -463,21 +463,20 @@ This works but it only works if we need to build up the list in this particular 
 >
 > {: .solution}
 > > ## Solution
-> >
 > > The multiplication operator `*` used on a list replicates elements of the
 > > list and concatenates them together:
 > >
 > >
-{: .output}
-~~~
+>> {: .output}
+> > ~~~
 > > [2, 4, 6, 8, 10, 2, 4, 6, 8, 10]
 > > ~~~
 > >
 > > It's equivalent to:
 > >
 > >
-> {: .python}
-> ~~~
+> > {: .python}
+> > ~~~
 > > counts + counts
 > > ~~~
 > >
