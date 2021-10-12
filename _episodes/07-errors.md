@@ -219,7 +219,8 @@ Both `SyntaxError` and `IndentationError` indicate a problem with the syntax of 
 but an `IndentationError` is more specific:
 it *always* means that there is a problem with how your code is indented.
 
-> ## Tabs and Spaces {: .callout}
+{: .callout}
+> ## Tabs and Spaces
 >
 > A quick note on indentation errors:
 > they can sometimes be insidious,
@@ -396,7 +397,8 @@ So, in this case, the program first performed a [function call](reference.html/#
 Inside this function,
 the program encountered an error on Line 6, when it tried to run the code `print(ice_creams[3])`.
 
-> ## Long Tracebacks {: .callout}
+{: .callout}
+> ## Long Tracebacks
 >
 > Sometimes, you might see a traceback that is very long -- sometimes they might even be 20 levels deep!
 > This can make it seem like something horrible happened,

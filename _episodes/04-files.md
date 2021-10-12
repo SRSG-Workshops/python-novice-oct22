@@ -95,7 +95,8 @@ that works on strings. We can use it like:
 
 So what's happening here?
 
-> ## Python and object orientation - in a nutshell {: .callout}
+{: .callout}
+> ## Python and object orientation - in a nutshell
 >
 > So far we've used strings, which are a type of object in Python.
 > In general, an object is an instance of something called a class.
@@ -199,7 +200,8 @@ temperature, is the 4th column. But in Python list indexes start at 0, so in
 fact we need to obtain the value from `data[3]` and **not** `data[4]`. So, we
 have made a note to that effect in a *comment*.
 
-> ## How and when should you add a comment? {: .callout}
+{: .callout}
+> ## How and when should you add a comment?
 >
 > The trick is to keep your audience in mind when writing code --- this could
 > be someone else in the lab, or perhaps someone in another institution. A

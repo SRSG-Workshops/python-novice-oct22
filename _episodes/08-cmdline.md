@@ -253,7 +253,8 @@ instead, which may generate errors. Feel free to read the next section in the
 tutorial which deals with how to handle them, but this is beyond the scope of this course
 and we won't cover it here.
 
-> ## The Right Way to Do It {: .callout}
+{: .callout}
+> ## The Right Way to Do It
 >
 > If our programs can take complex parameters or multiple filenames,
 > we shouldn't handle `sys.argv` directly.

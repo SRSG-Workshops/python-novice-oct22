@@ -257,7 +257,8 @@ TypeError: 'str' object does not support item assignment
 
 does not.
 
-> ## Ch-Ch-Ch-Changes {: .callout}
+{: .callout}
+> ## Ch-Ch-Ch-Changes
 >
 > Data which can be modified in place is called [mutable](reference.html#mutable),
 > while data which cannot be modified is called [immutable](reference.html#immutable).

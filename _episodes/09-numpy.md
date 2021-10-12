@@ -204,7 +204,8 @@ It takes a bit of getting used to,
 but one way to remember the rule is that
 the index is how many steps we have to take from the start to get the item we want.
 
-> ## In the Corner {: .callout}
+{: .callout}
+> ## In the Corner
 >
 > What may also surprise you is that when Python displays an array,
 > it shows the element with index `[0, 0]` in the upper left corner

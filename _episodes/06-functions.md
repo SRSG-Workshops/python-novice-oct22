@@ -171,7 +171,8 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > >     return wrapper + original + wrapper
 > > ~~~
 
-> ## How large should functions be? {: .callout}
+{: .callout}
+> ## How large should functions be?
 >
 > We use functions to define a big task in terms of smaller ones. This helps
 > to make our code more readable, as well as allowing us to more easily
