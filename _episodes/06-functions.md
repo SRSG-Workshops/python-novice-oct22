@@ -420,6 +420,7 @@ from the above:
 
 So here's the help we get for the module:
 
+{: .output}
 ~~~
 Help on module temp_conversion:
 
