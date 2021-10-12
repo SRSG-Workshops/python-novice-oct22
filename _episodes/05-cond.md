@@ -184,7 +184,6 @@ In this case,
 > if 1:
 >     print('one is true')
 > ~~~
->
 
 ## Another type of loop
 
@@ -249,6 +248,7 @@ for line in climate_data:
         print('Max temperature', data[3])
 ~~~
 
+{: .output}
 ~~~
 Max temperature 58.53
 Max temperature 58.60

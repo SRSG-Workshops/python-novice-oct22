@@ -57,6 +57,8 @@ $ python climate_analysis.py
 
 And we get the following output:
 
+
+{: .output}
 ~~~
 # POINT_X,POINT_Y,Min_temp_Jul_F,Max_temp_jul_F,Rainfall_jul_inch
 
@@ -143,6 +145,7 @@ for line in climate_data:
 
 And now we get:
 
+{: .output}
 ~~~
 # POINT_X,POINT_Y,Min_temp_Jul_F,Max_temp_jul_F,Rainfall_jul_inch
 461196.8188,1198890.052,47.77,58.53,0.76
@@ -220,6 +223,7 @@ have made a note to that effect in a *comment*.
 
 And we get:
 
+{: .output}
 ~~~
 Max temperature Max_temp_jul_F
 Max temperature 58.53

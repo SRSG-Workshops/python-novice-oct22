@@ -176,8 +176,6 @@ n
 ~~~
 
 {: .error}
-
-{: .error}
 ~~~
 Traceback (most recent call last):
   File "loop_test.py", line 6, in <module>
@@ -195,6 +193,7 @@ for char in word:
     print(char)
 ~~~
 
+{: .output}
 ~~~
 l
 e
@@ -213,6 +212,7 @@ for char in word:
     print(char)
 ~~~
 
+{: .output}
 ~~~
 o
 x
@@ -251,6 +251,7 @@ for char in word:
     print(char)
 ~~~
 
+{: .output}
 ~~~
 oxygen
 lead
@@ -288,6 +289,7 @@ print('There are', length, 'vowels')
 $ python count_vowels.py
 ~~~
 
+{: .output}
 ~~~
 There are 5 vowels
 ~~~
@@ -322,6 +324,7 @@ print('There are', length, 'vowels')
 print('The last vowel counted was', vowel)
 ~~~
 
+{: .output}
 ~~~
 There are 5 vowels
 The last vowel counted was u
@@ -337,6 +340,7 @@ we can add to the end of our program:
 print(len('aeiou'))
 ~~~
 
+{: .output}
 ~~~
 5
 ~~~

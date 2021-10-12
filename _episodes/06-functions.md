@@ -465,6 +465,7 @@ to do this to specify that the function we want help on is within the
 
 So we get:
 
+{: .output}
 ~~~
 Help on function fahr_to_celsius in module temp_conversion:
 
