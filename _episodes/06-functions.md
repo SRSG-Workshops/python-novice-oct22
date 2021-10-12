@@ -3,7 +3,9 @@ layout: page
 title: Modularising your code using functions
 minutes: 15
 ---
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > *   Define a function that takes parameters.
 > *   Return a value from a function.
@@ -25,7 +27,9 @@ We'll see how we can amend our code to be better structured to further increase 
 Let's look at adding a feature to our code to perform a conversion
 from Fahrenheit to Celsius on the temperature data we are looking at:
 
-~~~ {.python}
+
+{.python}
+~~~
 celsius = ((data[3] - 32) * (5/9))
 ~~~
 
@@ -36,7 +40,9 @@ specific, a floating point number.
 Fortunately, Python has some built-in functions to do these `type` conversions
 (*see `climate_analysis-5.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 for line in climate_data:
@@ -97,7 +103,9 @@ a shorthand way of re-executing pieces of code.
 So going back to our climate code, we can modularise our temperature
 conversion code into a function (*see `climate_analysis-6.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 def fahr_to_celsius(fahr):
@@ -142,11 +150,15 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > character at the beginning and end of the original.
 > A call to your function should look like this:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > print(fence('name', '*'))
 > ~~~
 >
-> ~~~ {.output}
+>
+{.output}
+~~~
 > *name*
 > ~~~
 >
@@ -174,6 +186,8 @@ Note that the function is at the top of the script. This is because Python
 reads the script from top to bottom, and if we called the function before we
 defined it, Python wouldn't know about it and throw an error like this:
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis-6.py", line 13, in <module>
@@ -195,7 +209,9 @@ And when we run it again --- which we most definitely should, to make sure it's 
 >
 > For example, what would be the output from the following:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > f = 0
 > k = 0
 >
@@ -228,7 +244,9 @@ And when we run it again --- which we most definitely should, to make sure it's 
 >
 > Following the function definition, a call to your function should look like this:
 >
-> ~~~{.python}
+>
+> {.python}
+> ~~~
 > is_sum_equal([1,2,3], 6))
 > True
 > is_sum_equal([2,4,6], 100)
@@ -249,7 +267,9 @@ And when we run it again --- which we most definitely should, to make sure it's 
 Of course, we can also add more functions. Let's add another, which performs
 a conversion from Fahrenheight to Kelvin. The formula looks like this:
 
-~~~ {.python}
+
+{.python}
+~~~
 kelvin = ((fahr - 32) * (5/9)) + 273.15
 ~~~
 
@@ -259,7 +279,9 @@ converts to Celsius units is the same. We could just used our `fahr_to_celsius`
 function for the unit conversion, and add 273.15 to that to get Kelvin. So
 our new function becomes:
 
-~~~ {.python}
+
+{.python}
+~~~
 def fahr_to_kelvin(fahr):
     # apply standard Fahrenheit to Kelvin formula
     kelvin = fahr_to_celsius(fahr) + 273.15
@@ -270,7 +292,9 @@ Which we insert after the `fahr_to_celsius` function (since our new function
 needs to call that one). We can then amend our code to also call that new
 function and output the result. Our code then becomes (*see `climate_analysis-7.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 def fahr_to_celsius(fahr):
@@ -330,7 +354,9 @@ we've already seen. But when describing functions, there's a better way.
 If the first thing in a function is a string that isn't assigned to a variable,
 that string is attached to the function as its documentation (*see `temp_conversion.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 """A library to perform temperature conversions"""
 
 def fahr_to_celsius(fahr):
@@ -364,7 +390,9 @@ applies to modules
 So how would we use this module and its functions in code?
 We do this by `import`ing the module into Python.
 
-~~~ {.python}
+
+{.python}
+~~~
 Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41)
 [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
 Type "help", "copyright", "credits" or "license" for more information.
@@ -375,7 +403,9 @@ When modules and functions are described in docstrings, we can ask for these
 explanations directly from the interpreter which can be useful. Following on
 from the above:
 
-~~~ {.python}
+
+{.python}
+~~~
 >>> help(temp_conversion)
 ~~~
 
@@ -413,7 +443,9 @@ is a more conventional, general term for a set of routines in any language.
 
 Similarly, for Docstrings in functions, e.g.:
 
-~~~ {.python}
+
+{.python}
+~~~
 >>> help(temp_conversion.fahr_to_celsius)
 ~~~
 
@@ -438,7 +470,9 @@ fahr_to_celsius(fahr)
 And then we need to `import` that function from our module into our script, so
 we can use it (*see `climate_analysis-8.py`*).
 
-~~~ {.python}
+
+{.python}
+~~~
 import temp_conversion
 
 climate_data = open('../data/sc_climate_data_10.csv', 'r')

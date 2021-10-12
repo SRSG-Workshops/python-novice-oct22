@@ -4,7 +4,9 @@ title: Python Style Guide
 minutes: 5
 ---
 
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > * Python coding conventions
 

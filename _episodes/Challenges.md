@@ -9,7 +9,9 @@ title: Challenges
 >
 > Draw diagrams showing what variables refer to what values after each statement in the following program:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > weight = 70.5
 > age = 35
 > # Take a trip to the planet Neptune
@@ -21,7 +23,9 @@ title: Challenges
 >
 > What does the following program print out?
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > first, second = 'Grace', 'Hopper'
 > third, fourth = second, first
 > print(third, fourth)
@@ -45,12 +49,16 @@ title: Challenges
 >
 > Use slicing to access only the last four characters of a string or entries of a list.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > string_for_slicing = "Observation date: 02-Feb-2013"
 > list_for_slicing = [["fluorine", "F"], ["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
 >
-> ~~~ {.output}
+>
+{.output}
+~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
@@ -68,7 +76,9 @@ title: Challenges
 > Given that, what do you think the multiplication operator `*` does on lists?
 > In particular, what will be the output of the following code?
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > counts = [2, 4, 6, 8, 10]
 > repeats = counts * 2
 > print(repeats)
@@ -93,7 +103,9 @@ title: Challenges
 > Using `range`,
 > write a loop to print the first 3 natural numbers:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > 1
 > 2
 > 3
@@ -103,13 +115,17 @@ title: Challenges
 >
 > Use a for-loop to convert the string "hello" into a list of letters:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > ["h", "e", "l", "l", "o"]
 > ~~~
 >
 > Hint: You can create an empty list like this:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > my_list = []
 > ~~~
 
@@ -117,7 +133,9 @@ title: Challenges
 >
 > Exponentiation is built into Python:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > print(5 ** 3)
 >125
 > ~~~
@@ -140,7 +158,9 @@ title: Challenges
 > * C
 > * B and C
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > if 4 > 5:
 >     print('A')
 > elif 4 <= 5:
@@ -158,7 +178,9 @@ title: Challenges
 > After reading and running the code below,
 > explain what the rule is for which values are considered true and which are considered false.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > if '':
 >     print('empty string is true')
 > if 'word':
@@ -185,11 +207,15 @@ title: Challenges
 > character at the beginning and end of the original.
 > A call to your function should look like this:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > print(fence('name', '*'))
 > ~~~
 >
-> ~~~ {.output}
+>
+{.output}
+~~~
 > *name*
 > ~~~
 
@@ -205,7 +231,9 @@ title: Challenges
 >
 > For example, what would be the output from the following:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > f = 0
 > k = 0
 >
@@ -231,7 +259,9 @@ title: Challenges
 >
 > Following the function definition, a call to your function should look like this:
 >
-> ~~~{.python}
+>
+> {.python}
+> ~~~
 > is_sum_equal([1,2,3], 6))
 > True
 > is_sum_equal([2,4,6], 100)
@@ -264,7 +294,9 @@ title: Challenges
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > for number in range(10):
 >     # use a if the number is a multiple of 3, otherwise use b
 >     if (Number % 3) == 0:
@@ -281,7 +313,9 @@ title: Challenges
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > def another_function
 >   print("Syntax errors are annoying.")
 >    print("But at least python tells us about them!")
@@ -294,7 +328,9 @@ title: Challenges
 > 2. Run the code, and read the error message. What type of error is it?
 > 3. Fix the error.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
@@ -309,7 +345,9 @@ title: Challenges
 > 4.  What is the type of error?
 > 5.  What is the error message?
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > # This code has an intentional error. Do not type it directly;
 > # use it for reference to understand the error message below.
 > def print_message(day):
@@ -353,7 +391,9 @@ title: Challenges
 > physiques.  BMI is calculated as **weight in kilograms**
 > divided by the the square of **height in metres**.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
 >
 > def calculate_bmi(weight, height):
@@ -365,7 +405,9 @@ title: Challenges
 >     print("Patient's BMI is: %f" % bmi)
 > ~~~
 >
-> ~~~ {.output}
+>
+{.output}
+~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
@@ -405,7 +447,9 @@ title: Challenges
 > * C
 > * B and C
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > if 4 > 5:
 >     print('A')
 > elif 4 <= 5:

@@ -4,7 +4,8 @@ title: Handling Errors
 minutes: 30
 ---
 
-> ## Learning Objectives {.objectives}
+{.objectives}
+> ## Learning Objectives
 >
 > *   Be able to read and understand how Python reports errors through tracebacks
 > *   Understand how and why errors occur in Python, and common types of errors
@@ -25,10 +26,15 @@ Errors in Python have a very specific form,
 called a [traceback](reference.html#traceback).
 Let's examine one:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(a)
 ~~~
 
+{.error}
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -49,10 +55,14 @@ However,
 there are a few very common reasons why you might have an undefined variable.
 The first is that you meant to use a [string](reference.html/#string), but forgot to put quotes around it:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(hello)
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -63,12 +73,16 @@ The second is that you just forgot to create the variable before using it.
 In the following example,
 `count` should have been defined (e.g., with `count = 0`) before the for loop:
 
-~~~ {.python}
+
+{.python}
+~~~
 for number in range(10):
     count = count + number
 print("The count is:", count)
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -81,13 +95,17 @@ Frustratingly, this actually does not fix the error.
 Remember that variables are [case-sensitive](reference.html/#case-sensitive),
 so the variable `count` is different from `Count`. We still get the same error, because we still have not defined `count`:
 
-~~~ {.python}
+
+{.python}
+~~~
 Count = 0
 for number in range(10):
     count = count + number
 print("The count is:", count)
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -105,7 +123,9 @@ NameError: name 'count' is not defined
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > for number in range(10):
 >     # use a if the number is a multiple of 3, otherwise use b
 >     if (Number % 3) == 0:
@@ -151,7 +171,9 @@ If Python doesn't know how to read the program,
 it will just give up and inform you with an error.
 For example:
 
-~~~ {.python}
+
+{.python}
+~~~
 def some_function()
     msg = "hello, world!"
     print(msg)
@@ -174,7 +196,9 @@ If we fix the problem with the colon,
 we see that there is *also* an `IndentationError`,
 which means that the lines in the function definition do not all have the same indentation:
 
-~~~ {.python}
+
+{.python}
+~~~
 def some_function():
     msg = "hello, world!"
     print(msg)
@@ -203,7 +227,9 @@ it *always* means that there is a problem with how your code is indented.
 > the first two lines are using a tab for indentation,
 > while the third line uses four spaces:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > def some_function():
 >     msg = "hello, world!"
 >     print(msg)
@@ -229,7 +255,9 @@ it *always* means that there is a problem with how your code is indented.
 > 3. Fix the error.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > def another_function
 >   print("Syntax errors are annoying.")
 >    print("But at least python tells us about them!")
@@ -241,7 +269,9 @@ it *always* means that there is a problem with how your code is indented.
 > `IndentationError` for mismatch between second and third lines.
 > > A fixed version is:
 > >
-> > ~~~ {.python}
+> >
+> {.python}
+> ~~~
 > > def another_function():
 > >     print("Syntax errors are annoying.")
 > >     print("But at least python tells us about them!")
@@ -259,7 +289,9 @@ and they answered "caturday",
 you might be a bit annoyed.
 Python gets similarly annoyed if you try to ask it for an item that doesn't exist:
 
-~~~ {.python}
+
+{.python}
+~~~
 letters = ['a', 'b', 'c']
 print("Letter #1 is", letters[0])
 print("Letter #2 is", letters[1])
@@ -267,12 +299,16 @@ print("Letter #3 is", letters[2])
 print("Letter #4 is", letters[3])
 ~~~
 
-~~~ {.output}
+
+{.output}
+~~~
 Letter #1 is a
 Letter #2 is b
 Letter #3 is c
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -289,7 +325,9 @@ meaning we tried to access a list index that did not exist.
 > 2. Run the code, and read the error message. What type of error is it?
 > 3. Fix the error.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
@@ -298,7 +336,9 @@ meaning we tried to access a list index that did not exist.
 > > `IndexError`; the last entry is `seasons[3]`, so `seasons[4]` doesn't make sense.
 > > A fixed version is:
 > >
-> > ~~~ {.python}
+> >
+> {.python}
+> ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[-1])
 > > ~~~
@@ -306,7 +346,9 @@ meaning we tried to access a list index that did not exist.
 
 Here's another example of Index Error.
 
-~~~ {.python}
+
+{.python}
+~~~
 # This code has an intentional error. You can type it directly or
 # use it for reference to understand the error message below.
 def favorite_ice_cream():
@@ -320,6 +362,8 @@ def favorite_ice_cream():
 favorite_ice_cream()
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -385,7 +429,9 @@ hopefully the custom error message is informative enough to help you figure out 
 > 4.  What is the type of error?
 > 5.  What is the error message?
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > # This code has an intentional error. Do not type it directly;
 > # use it for reference to understand the error message below.
 > def print_message(day):
@@ -432,7 +478,9 @@ Some defects can cause output to be incorrect, and display no error message.
 
 Consider the following code (which you can find in `normalize.py` in the code directory):
 
-~~~ {.python}
+
+{.python}
+~~~
 def normalize_rectangle(rect):
     '''Normalizes a rectangle so that it is at the origin and 1.0 units long on its longest axis.'''
     x0, y0, x1, y1 = rect
@@ -451,26 +499,34 @@ def normalize_rectangle(rect):
 
 So if we normalize a rectangle that is taller than it is wide...:
 
-~~~ {.python}
+
+{.python}
+~~~
 from normalize import normalize_rectangle
 print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
 ~~~
 
 ...everything seems ok:
 
-~~~ {.output}
+
+{.output}
+~~~
 (0, 0, 0.2, 1.0)
 ~~~
 
 And if we normalize one that's wider than it is tall:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0) ))
 ~~~
 
 Everything still seems... wait a minute!
 
-~~~ {.output}
+
+{.output}
+~~~
 (0, 0, 1.0, 5.0)
 ~~~
 
@@ -492,7 +548,9 @@ Looking at our code, line 8 should divide dy by dx.
 > physiques.  BMI is calculated as **weight in kilograms**
 > divided by the the square of **height in metres**.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
 >
 > def calculate_bmi(weight, height):
@@ -504,7 +562,9 @@ Looking at our code, line 8 should divide dy by dx.
 >     print("Patient's BMI is: %f" % bmi)
 > ~~~
 >
-> ~~~ {.output}
+>
+{.output}
+~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
@@ -549,10 +609,14 @@ returns an `UnsupportedOperationError`.
 More generally, problems with input and output manifest as
 `IOError`s or `OSError`s, depending on the version of Python you use.
 
-~~~ {.python}
+
+{.python}
+~~~
 file_handle = open('myfile.txt', 'r')
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -577,11 +641,15 @@ and then try to read from it,
 you will get an `UnsupportedOperation` error
 telling you that the file was not opened for reading:
 
-~~~ {.python}
+
+{.python}
+~~~
 file_handle = open('myfile.txt', 'w')
 file_handle.read()
 ~~~
 
+
+{.error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>

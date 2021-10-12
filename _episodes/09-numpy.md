@@ -3,7 +3,9 @@ layout: page
 title: Reading and analysing Patient data using libraries
 minutes: 20
 ---
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > *   Explain what a library is, and what libraries are used for.
 > *   Load a Python library and use the things it contains.
@@ -41,7 +43,9 @@ especially if you have matrices.
 
 Let's start by ensuring we are in the `python/novice' directory, e.g.:
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ pwd
 ~~~
 
@@ -53,14 +57,18 @@ And we should see:
 
 First, let's go into the `code` subdirectory, and run the Python interpreter.
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ cd code
 $ python
 ~~~
 
 We can load NumPy using:
 
-~~~ {.python}
+
+{.python}
+~~~
 import numpy
 ~~~
 
@@ -72,7 +80,9 @@ we can ask the library to read our data file for us.
 Just as we can assign a single value to a variable, we can also assign an array of values
 to a variable using the same syntax:
 
-~~~ {.python}
+
+{.python}
+~~~
 data = numpy.loadtxt(fname='../data/inflammation-01.csv', delimiter=',')
 ~~~
 
@@ -100,10 +110,14 @@ Now that our data is in memory, we can start doing things with it.
 
 If we want to check that our data has been loaded, we can print the variable's value:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data)
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 array([[ 0.,  0.,  1., ...,  3.,  0.,  0.],
        [ 0.,  1.,  2., ...,  1.,  0.,  1.],
        [ 0.,  1.,  1., ...,  2.,  1.,  1.],
@@ -115,20 +129,28 @@ array([[ 0.,  0.,  1., ...,  3.,  0.,  0.],
 
 Let's ask what [type](../../reference.html#type) of thing `data` refers to:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(type(data))
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 <type 'numpy.ndarray'>
 ~~~
 
 The output tells us that `data` currently refers to an N-dimensional array created by the NumPy library.
 We can see what its [shape](../../reference.html#shape) is like this:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data.shape)
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 (60, 40)
 ~~~
 
@@ -144,17 +166,25 @@ If we want to get a single value from the matrix,
 we must provide an [index](../../reference.html#index) in square brackets,
 just as we do in math:
 
-~~~ {.python}
+
+{.python}
+~~~
 print('first value in data:', data[0, 0])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 first value in data: 0.0
 ~~~
 
-~~~ {.python}
+
+{.python}
+~~~
 print('middle value in data:', data[30, 20])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 middle value in data: 13.0
 ~~~
 
@@ -190,10 +220,14 @@ For example,
 we can select the first ten days (columns) of values
 for the first four (rows) patients like this:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data[0:4, 0:10])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 [[ 0.  0.  1.  3.  1.  2.  4.  7.  8.  3.]
  [ 0.  1.  2.  1.  2.  1.  3.  2.  2.  6.]
  [ 0.  1.  1.  3.  3.  2.  6.  2.  5.  9.]
@@ -210,10 +244,14 @@ but the rule is that the difference between the upper and lower bounds is the nu
 
 We don't have to start slices at 0:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data[5:10, 0:10])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 [[ 0.  0.  1.  2.  2.  4.  2.  1.  6.  4.]
  [ 0.  0.  2.  2.  4.  2.  2.  5.  5.  8.]
  [ 0.  0.  1.  2.  3.  1.  2.  3.  5.  3.]
@@ -230,12 +268,16 @@ and if we don't include either
 (i.e., if we just use ':' on its own),
 the slice includes everything:
 
-~~~ {.python}
+
+{.python}
+~~~
 small = data[:3, 36:]
 print('small is:')
 print(small)
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 small is:
 [[ 2.  3.  0.  0.]
  [ 1.  1.  0.  1.]
@@ -249,20 +291,26 @@ add, subtract, multiply, and divide.
 the operation is done on each individual element of the array.
 Thus:
 
-~~~ {.python}
+
+{.python}
+~~~
 doubledata = data * 2.0
 ~~~
 
 will create a new array `doubledata`
 whose elements have the value of two times the value of the corresponding elements in `data`:
 
-~~~ {.python}
+
+{.python}
+~~~
 print('original:')
 print(data[:3, 36:])
 print('doubledata:')
 print(doubledata[:3, 36:])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 original:
 [[ 2.  3.  0.  0.]
  [ 1.  1.  0.  1.]
@@ -279,18 +327,24 @@ you did the arithmetic operation with another array of the same size and shape,
 the operation will be done on corresponding elements of the two arrays.
 Thus:
 
-~~~ {.python}
+
+{.python}
+~~~
 tripledata = doubledata + data
 ~~~
 
 will give you an array where `tripledata[0,0]` will equal `doubledata[0,0]` plus `data[0,0]`,
 and so on for all other elements of the arrays.
 
-~~~ {.python}
+
+{.python}
+~~~
 print('tripledata:')
 print(tripledata[:3, 36:])
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 tripledata:
 [[ 6.  9.  0.  0.]
  [ 3.  3.  0.  3.]
@@ -303,10 +357,14 @@ If we want to find the average inflammation for all patients on all days,
 for example,
 we can just ask the array for its mean value
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data.mean())
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 6.14875
 ~~~
 
@@ -326,12 +384,16 @@ parentheses are how we tell Python to go and do something for us.
 
 NumPy arrays have lots of useful methods:
 
-~~~ {.python}
+
+{.python}
+~~~
 print('maximum inflammation:', data.max())
 print('minimum inflammation:', data.min())
 print('standard deviation:', data.std())
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 maximum inflammation: 20.0
 minimum inflammation: 0.0
 standard deviation: 4.613833197118566
@@ -345,21 +407,29 @@ or the average value per day.
 One way to do this is to select the data we want to create a new temporary array,
 then ask it to do the calculation:
 
-~~~ {.python}
+
+{.python}
+~~~
 patient_0 = data[0, :] # 0 on the first axis, everything on the second
 print('maximum inflammation for patient 0:', patient_0.max())
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 maximum inflammation for patient 0: 18.0
 ~~~
 
 We don't actually need to store the row in a variable of its own.
 Instead, we can combine the selection and the method call:
 
-~~~ {.python}
+
+{.python}
+~~~
 print('maximum inflammation for patient 3:', data[2, :].max())
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 maximum inflammation for patient 3: 19.0
 ~~~
 
@@ -375,10 +445,14 @@ most array methods allow us to specify the axis we want to work on.
 If we ask for the average across axis 0 (representing the patients axis),
 we get:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data.mean(axis=0))
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 [  0.           0.45         1.11666667   1.75         2.43333333   3.15
    3.8          3.88333333   5.23333333   5.51666667   5.95         5.9
    8.35         7.73333333   8.36666667   9.5          9.58333333
@@ -392,10 +466,14 @@ print(data.mean(axis=0))
 As a quick check,
 we can ask this array what its shape is:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data.mean(axis=0).shape)
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 (40,)
 ~~~
 
@@ -403,10 +481,14 @@ The expression `(40,)` tells us we have an N&times;1 vector,
 so this is the average inflammation per day for all patients.
 If we average across axis 1, we get:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(data.mean(axis=1))
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 [ 5.45   5.425  6.1    5.9    5.55   6.225  5.975  6.65   6.625  6.525
   6.775  5.8    6.225  5.75   5.225  6.3    6.55   5.7    5.85   6.55
   5.775  5.825  6.175  6.1    5.8    6.425  6.05   6.025  6.175  6.55

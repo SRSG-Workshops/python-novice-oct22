@@ -3,7 +3,9 @@ layout: page
 title: Repeating actions using loops
 minutes: 15
 ---
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > *   Write for loops to repeat simple calculations.
 > *   Build a basic Python script and run it.
@@ -16,13 +18,17 @@ minutes: 15
 Using the tools we've covered till now, repeating a simple statement many times is tedious. The only item
 we can currently repeat easily is printing the exact same message multiple times. For example,
 
-~~~{.python}
+
+{.python}
+~~~
 print("I love programming in Python!\n"*10)
 ~~~
 
 will produce the output:
 
-~~~{.output}
+
+{.output}
+~~~
 I love programming in Python!
 I love programming in Python!
 I love programming in Python!
@@ -36,7 +42,9 @@ I love programming in Python!
 ~~~
 Imagine that we wanted to number this list so that we printed:
 
-~~~{.output}
+
+{.output}
+~~~
 1. I love programming in Python!
 2. I love programming in Python!
 3. I love programming in Python!
@@ -92,7 +100,9 @@ One way is to use four `print` statements.
 Let's write a simple Python program, using our text editor, like we did
 with Bash. Let's start our text editor and type the following, saving it in a file called `word_print.py`:
 
-~~~ {.python}
+
+{.python}
+~~~
 word = 'lead'
 print(word[0])
 print(word[1])
@@ -105,13 +115,17 @@ is a Python script.
 
 Once you've saved it, we can run it from the command line like this (from another terminal or shell, so we can see both the program and how it runs at once):
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ python word_print.py
 ~~~
 
 Here we are asking Python to run our Python script. We should see the following:
 
-~~~ {.output}
+
+{.output}
+~~~
 l
 e
 a
@@ -132,7 +146,9 @@ But looking at our code again, that's a bad approach for two reasons:
 
 We can easily demonstrate the second point by changing our script to the following (just changing the first statement):
 
-~~~ {.python}
+
+{.python}
+~~~
 word = 'tin'
 print(word[0])
 print(word[1])
@@ -142,18 +158,26 @@ print(word[3])
 
 Running it again...
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ python word_print.py
 ~~~
 
 ...gives us the following:
 
-~~~ {.output}
+
+{.output}
+~~~
 t
 i
 n
 ~~~
-~~~ {.error}
+
+{.error}
+
+{.error}
+~~~
 Traceback (most recent call last):
   File "loop_test.py", line 6, in <module>
     print(word[3])
@@ -162,7 +186,9 @@ IndexError: string index out of range
 
 Here's a better approach:
 
-~~~ {.python}
+
+{.python}
+~~~
 word = 'lead'
 for char in word:
     print(char)
@@ -178,7 +204,9 @@ d
 This is shorter---certainly shorter than something that prints every character in a hundred-letter string---and
 more robust as well:
 
-~~~ {.python}
+
+{.python}
+~~~
 word = 'oxygen'
 for char in word:
     print(char)
@@ -197,7 +225,9 @@ The improved version of code for printing characters uses a [for loop](../../ref
 to repeat an operation---in this case, printing---once for each thing in a collection.
 The general form of a loop is:
 
-~~~ {.python}
+
+{.python}
+~~~
 for variable in collection:
     do things with variable
 ~~~
@@ -212,7 +242,9 @@ The great thing about Python is that the simplicity of how it handles loops
 means we can use the same loop structure for handling other types of data, like
 lists instead. So with one minor alteration:
 
-~~~ {.python}
+
+{.python}
+~~~
 word = ['oxygen', 'lead', 'tin']
 for char in word:
     print(char)
@@ -239,14 +271,18 @@ Which is really helpful, and means we don't need to remember a different way to 
 
 Let's look at a different program called `count_vowels.py`, with another loop that repeatedly updates a variable:
 
-~~~ {.python}
+
+{.python}
+~~~
 length = 0
 for vowel in 'aeiou':
     length = length + 1
 print('There are', length, 'vowels')
 ~~~
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ python count_vowels.py
 ~~~
 
@@ -274,7 +310,9 @@ Note that a loop variable is just a variable that's being used to record progres
 It still exists after the loop is over,
 and we can re-use variables previously defined as loop variables as well:
 
-~~~ {.python}
+
+{.python}
+~~~
 length = 0
 for vowel in 'aeiou':
     length = length + 1
@@ -291,7 +329,9 @@ Note also that finding the length of a string is such a common operation
 that Python actually has a built-in function to do it called `len`, which
 we can add to the end of our program:
 
-~~~ {.python}
+
+{.python}
+~~~
 print(len('aeiou'))
 ~~~
 
@@ -316,7 +356,9 @@ so we should always use it when we can.
 > Using `range`,
 > write a loop to print the first 3 natural numbers:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > 1
 > 2
 > 3
@@ -332,13 +374,17 @@ so we should always use it when we can.
 >
 > Use a for-loop to convert the string "hello" into a list of letters:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > ["h", "e", "l", "l", "o"]
 > ~~~
 >
 > Hint: You can create an empty list like this:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > my_list = []
 > ~~~
 >
@@ -354,7 +400,9 @@ so we should always use it when we can.
 >
 > Exponentiation is built into Python:
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > print(5 ** 3)
 >125
 > ~~~

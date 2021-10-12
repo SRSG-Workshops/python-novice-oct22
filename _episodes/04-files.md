@@ -3,7 +3,9 @@ layout: page
 title: Processing data files
 minutes: 15
 ---
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > *   Write a script to open a data file and print out its contents.
 > *   Perform some operations on strings to extract desired data from it.
@@ -29,7 +31,9 @@ We first need to be able to read in our data from the `sc_climate_data_10.csv`
 file, and using a loop, print out each line. Let's write another script
 called `climate_analysis.py`, and enter the following (*see `climate_analysis-1.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 for line in climate_data:
@@ -45,7 +49,9 @@ does something quite helpful in a loop. By specifying `climate_data` as our coll
 
 We can run our code with:
 
-~~~ {.bash}
+
+{.bash}
+~~~
 $ python climate_analysis.py
 ~~~
 
@@ -81,7 +87,9 @@ newlines which exist at the end of each line in our data file.
 We can remove them by stripping them out, using `rstrip`, a function
 that works on strings. We can use it like:
 
-~~~ {.python}
+
+{.python}
+~~~
     print(line.rstrip())
 ~~~
 
@@ -123,7 +131,9 @@ So what's happening here?
 
 So, let's try that out (*see `climate_analysis-2.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 for line in climate_data:
@@ -161,7 +171,9 @@ method called `split()` which can separate all the columns into a list.
 We've seen how we can trim trailing newlines from strings with `rstrip()` acting
 on a string object. Well, we use `split()` in exactly the same way:
 
-~~~ {.python}
+
+{.python}
+~~~
     data = line.split(',')
 ~~~
 
@@ -170,7 +182,9 @@ variable called `data`. We can access elements in that list as before.
 
 So, let's change our code accordingly (*see `climate_analysis-3.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 for line in climate_data:

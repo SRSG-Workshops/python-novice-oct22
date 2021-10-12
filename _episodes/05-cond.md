@@ -3,7 +3,9 @@ layout: page
 title: Making choices
 minutes: 15
 ---
-> ## Learning Objectives {.objectives}
+
+{.objectives}
+> ## Learning Objectives
 >
 > *   Write conditional statements including `if`, `elif`, and `else` branches.
 > *   Evaluate expressions containing `and` and `or`.
@@ -16,7 +18,9 @@ So what if we want to do something that's dependent on whether a given condition
 We can ask Python to take different actions, depending on a condition, with an if statement
 (you'll need to type this in - don't copy and paste this code directly, it won't work):
 
-~~~ {.python}
+
+{.python}
+~~~
 num = 37
 if num > 100:
     print("greater")
@@ -24,7 +28,9 @@ else:
     print("not greater")
 print("done")
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 not greater
 done
 ~~~
@@ -44,14 +50,18 @@ If there isn't one,
 Python simply does nothing if the test is false
 (you'll need to type this in - don't copy and paste this code directly, it won't work):
 
-~~~ {.python}
+
+{.python}
+~~~
 num = 53
 print("before conditional...")
 if num > 100:
     print("53 is greater than 100")
 print("...after conditional")
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 before conditional...
 ...after conditional
 ~~~
@@ -59,7 +69,9 @@ before conditional...
 We can also chain several tests together using `elif`,
 which is short for "else if" as shown in the example code chunk below:
 
-~~~ {.python}
+
+{.python}
+~~~
 num = -3
 if num > 0:
     print("Sign of a number:",num,"is:",1)
@@ -68,7 +80,9 @@ elif num == 0:
 else:
     print("Sign of a number",num, "is:",-1)
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 sign of a number -3 is:  -1
 ~~~
 
@@ -86,23 +100,31 @@ it does take a bit of getting used to...
 We can also combine tests using `and` and `or`.
 `and` is only true if both parts are true:
 
-~~~ {.python}
+
+{.python}
+~~~
 if (1 > 0) and (-1 > 0):
     print("both parts are true")
 else:
     print("one part is not true")
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 one part is not true
 ~~~
 
 while `or` is true if either part is true:
 
-~~~ {.python}
+
+{.python}
+~~~
 if (1 < 0) or ('left' < 'right'):
     print("at least one test is true")
 ~~~
-~~~ {.output}
+
+{.output}
+~~~
 at least one test is true
 ~~~
 
@@ -118,7 +140,9 @@ In this case,
 > * C
 > * B and C
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > if 4 > 5:
 >     print('A')
 > elif 4 <= 5:
@@ -140,7 +164,9 @@ In this case,
 > After reading and running the code below,
 > explain what the rule is for which values are considered true and which are considered false.
 >
-> ~~~ {.python}
+>
+> {.python}
+> ~~~
 > if '':
 >     print('empty string is true')
 > if 'word':
@@ -171,7 +197,9 @@ true.
 
 Consider the following example:
 
-~~~ {.python}
+
+{.python}
+~~~
 from random import randint
 number = 0
 while number != 5:
@@ -201,7 +229,9 @@ a '#' (which denotes a comment line), and if so, avoid printing it out.
 
 So let's use an `if` statement to do that (*see `climate_analysis-4.py`*):
 
-~~~ {.python}
+
+{.python}
+~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
 for line in climate_data:
