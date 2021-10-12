@@ -4,7 +4,7 @@ title: Data Visualisation
 minutes: 5
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *  Displaying simple graphs
@@ -24,7 +24,7 @@ and use two of its functions to create and display a heat map of our data
 from the previous topic:
 
 
-{.python}
+{: .python}
 ~~~
 from matplotlib import pyplot
 pyplot.imshow(data)
@@ -44,7 +44,7 @@ after it's been displayed, matplotlib *resets* and clears the current graph. To 
 again, we need to generate the plot again, e.g.:
 
 
-{.python}
+{: .python}
 ~~~
 pyplot.imshow(data)
 pyplot.show()
@@ -53,7 +53,7 @@ pyplot.show()
 Let's take a look at the average inflammation over time:
 
 
-{.python}
+{: .python}
 ~~~
 ave_inflammation = data.mean(axis=0)
 pyplot.plot(ave_inflammation)
@@ -72,7 +72,7 @@ we expect a sharper rise and slower fall.
 Let's have a look at two other statistics:
 
 
-{.python}
+{: .python}
 ~~~
 pyplot.plot(data.max(axis=0))
 pyplot.show()
@@ -81,7 +81,7 @@ pyplot.show()
 ![Maximum Value Along The First Axis](01-numpy_files/novice/python/01-numpy_78_1.png)
 
 
-{.python}
+{: .python}
 ~~~
 pyplot.plot(data.min(axis=0))
 pyplot.show()
@@ -101,7 +101,7 @@ Here are our three plots side by side using aliases for `numpy` and `pyplot`:
 
 
 
-{.python}
+{: .python}
 ~~~
 import numpy as np
 from matplotlib import pyplot as plt
@@ -141,12 +141,12 @@ how large we want the figure to be,
 that we're creating three sub-plots,
 and what to draw for each one.
 
-> ## Make your own plot {.challenge}
+> ## Make your own plot {: .challenge}
 >
 > Create a plot showing the standard deviation of the inflammation data for each day across all patients.
 > Hint: `data.std(axis=0)` gives you standard deviation.
 
-> ## Moving plots around {.challenge}
+> ## Moving plots around {: .challenge}
 >
 > Modify the program to display the three plots on top of one another instead of side by side.
 
@@ -154,7 +154,7 @@ We now have almost everything we need to process all our data files.
 The only thing that's missing is a library with a rather unpleasant name:
 
 
-{.python}
+{: .python}
 ~~~
 import glob
 ~~~
@@ -167,13 +167,13 @@ while `?` matches any one character.
 We can use this to get the names of all the HTML files in the current directory:
 
 
-{.python}
+{: .python}
 ~~~
 print(glob.glob('*.html'))
 ~~~
 
 
-{.output}
+{: .output}
 ~~~
 ['01-numpy.html', '02-loop.html', '03-lists.html', '04-files.html', '05-cond.html', '06-func.html', '07-errors.html', '08-defensive.html', '09-debugging.html', '10-cmdline.html', 'index.html', 'LICENSE.html', 'instructors.html', 'README.html', 'discussion.html', 'reference.html']
 ~~~
@@ -187,7 +187,7 @@ the "something" we want to do is generate a set of plots for each file in our in
 Let's test it by analyzing the first three files in the list:
 
 
-{.python}
+{: .python}
 ~~~
 import numpy
 import matplotlib
@@ -221,7 +221,7 @@ for filename in filenames:
 ~~~
 
 
-{.output}
+{: .output}
 ~~~
 inflammation-01.csv
 ~~~
@@ -230,7 +230,7 @@ inflammation-01.csv
 
 
 
-{.output}
+{: .output}
 ~~~
 inflammation-02.csv
 ~~~
@@ -239,7 +239,7 @@ inflammation-02.csv
 
 
 
-{.output}
+{: .output}
 ~~~
 inflammation-03.csv
 ~~~
@@ -259,7 +259,7 @@ We can also save our plots to disk. Let's change our updated script to do that, 
 Let's do this now, e.g.:
 
 
-{.python}
+{: .python}
 ~~~
 import numpy
 import matplotlib

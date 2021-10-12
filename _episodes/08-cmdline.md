@@ -4,7 +4,7 @@ title: Command-Line Programs
 minutes: 10
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Use the values of command-line arguments in a program.
@@ -37,7 +37,7 @@ with the arguments passed in as `sys.argv[1]`, `sys.argv[2]`, etc.
 So we can change our script to handle a filename argument (*see `climate_analysis-9.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 import sys
 import temp_conversion
@@ -67,7 +67,7 @@ for line in climate_data:
 And if we run that from the shell, with
 
 
-{.bash}
+{: .bash}
 ~~~
 $ python climate_analysis.py ../data/sc_climate_data_10.csv
 ~~~
@@ -93,7 +93,7 @@ Max temperature in Celsius 16.33888888888889 Kelvin 289.4888888888889
 But now we can run it on any file, for example:
 
 
-{.bash}
+{: .bash}
 ~~~
 $ python climate_analysis.py ../data/sc_climate_data_1000.csv
 ~~~
@@ -131,7 +131,7 @@ In this case, we can fix our code by adding in a condition
 (*see `climate_analysis-10.py`*):
 
 
-{.python}
+{: .python}
 ~~~
         # don't process invalid temperature readings of -9999
         if fahr != -9999:
@@ -152,9 +152,9 @@ But if we (or someone else) runs our script accidentally with no filename,
 we get:
 
 
-{.error}
+{: .error}
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis.py", line 5, in <module>
@@ -170,7 +170,7 @@ number of arguments are given to our script.
 Insert the following before the `filename` assignment (*see `climate_analysis-11.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 script = sys.argv[0]
 assert len(sys.argv) == 2, script + ": requires filename"
@@ -183,9 +183,9 @@ string to output if the condition is false, to **assert** that we have only
 Now when we run it with no arguments, we get:
 
 
-{.error}
+{: .error}
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis.py", line 5, in <module>
@@ -208,7 +208,7 @@ is clearly understood, we can simplify the output by changing the
 `print()` statement:
 
 
-{.python}
+{: .python}
 ~~~
             print(str(celsius)+", "+str(kelvin))
 ~~~
@@ -220,7 +220,7 @@ We could run the script now in a pipeline, for example, to get the last
 10 rows of output (*see `climate_analysis-12.py`*):
 
 
-{.bash}
+{: .bash}
 ~~~
 python climate_analysis.py ../data/sc_climate_data_1000.csv | tail -10
 ~~~
@@ -228,7 +228,7 @@ python climate_analysis.py ../data/sc_climate_data_1000.csv | tail -10
 Or use `grep ` to search the output for fahrenheit values that are equal to '14.85':
 
 
-{.bash}
+{: .bash}
 ~~~
 python climate_analysis.py ../data/sc_climate_data_1000.csv | grep '14.85,'
 ~~~
@@ -236,7 +236,7 @@ python climate_analysis.py ../data/sc_climate_data_1000.csv | grep '14.85,'
 We can now also do things like:
 
 
-{.bash}
+{: .bash}
 ~~~
 python climate_analysis.py ../data/sc_climate_data_1000.csv | wc -l
 ~~~
@@ -253,7 +253,7 @@ instead, which may generate errors. Feel free to read the next section in the
 tutorial which deals with how to handle them, but this is beyond the scope of this course
 and we won't cover it here.
 
-> ## The Right Way to Do It {.callout}
+> ## The Right Way to Do It {: .callout}
 >
 > If our programs can take complex parameters or multiple filenames,
 > we shouldn't handle `sys.argv` directly.
@@ -269,7 +269,7 @@ We could also run the script now in a pipeline, for example, to get the first
 10 rows of output:
 
 
-{.bash}
+{: .bash}
 ~~~
 python climate_analysis.py ../data/sc_climate_data_1000.csv | head -10
 ~~~
@@ -296,7 +296,7 @@ We can fix this on these platforms by including the following at the top, after 
 `temp_conversion` import (*see `climate_analysis-13.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 import signal
 signal.signal(signal.SIGPIPE, signal.SIG_DFL)

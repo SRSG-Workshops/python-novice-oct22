@@ -4,7 +4,7 @@ title: Modularising your code using functions
 minutes: 15
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Define a function that takes parameters.
@@ -28,7 +28,7 @@ Let's look at adding a feature to our code to perform a conversion
 from Fahrenheit to Celsius on the temperature data we are looking at:
 
 
-{.python}
+{: .python}
 ~~~
 celsius = ((data[3] - 32) * (5/9))
 ~~~
@@ -41,7 +41,7 @@ Fortunately, Python has some built-in functions to do these `type` conversions
 (*see `climate_analysis-5.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -104,7 +104,7 @@ So going back to our climate code, we can modularise our temperature
 conversion code into a function (*see `climate_analysis-6.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -141,7 +141,7 @@ so that we can use them inside the function.
 Inside the function,
 we use a [return statement](../../reference.html#return-statement) to send a result back to whoever asked for it.
 
-> ## Combining Strings {.challenge}
+> ## Combining Strings {: .challenge}
 >
 > "Adding" two strings produces their concatenation:
 > `'a' + 'b'` is `'ab'`.
@@ -151,24 +151,24 @@ we use a [return statement](../../reference.html#return-statement) to send a res
 > A call to your function should look like this:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > print(fence('name', '*'))
 > ~~~
 >
 >
-{.output}
+{: .output}
 ~~~
 > *name*
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > ~~~
 > > def fence(original, wrapper):
 > >     return wrapper + original + wrapper
 > > ~~~
 
-> ## How large should functions be? {.callout}
+> ## How large should functions be? {: .callout}
 >
 > We use functions to define a big task in terms of smaller ones. This helps
 > to make our code more readable, as well as allowing us to more easily
@@ -187,7 +187,7 @@ reads the script from top to bottom, and if we called the function before we
 defined it, Python wouldn't know about it and throw an error like this:
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "climate_analysis-6.py", line 13, in <module>
@@ -197,7 +197,7 @@ NameError: name 'fahr_to_celsius' is not defined
 
 And when we run it again --- which we most definitely should, to make sure it's still working as expected --- we see the same output, which is correct.
 
-> ## How do function parameters work? {.challenge}
+> ## How do function parameters work? {: .challenge}
 >
 > We actually used the same variable name `fahr` in our main code and
 > and the function. But it's important to note that even though they
@@ -210,7 +210,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > For example, what would be the output from the following:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > f = 0
 > k = 0
@@ -229,7 +229,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > 2. 80
 > 3. 0
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > 3 - the f and k variables defined and used within the function
 > > do not interfere with those defined outside of the function.
 > >
@@ -237,7 +237,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > > conflicts with variable names that are defined outside of our function
 > > that may cause it to behave incorrectly. This is known as variable scoping.
 
-> ## Does the sum of a list equal a given value? {.challenge}
+> ## Does the sum of a list equal a given value? {: .challenge}
 >
 > Write a function to take a list of numbers and another value, and return
 > whether or not the sum of the list of numbers is equal to that value.
@@ -245,14 +245,14 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > Following the function definition, a call to your function should look like this:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > is_sum_equal([1,2,3], 6))
 > True
 > is_sum_equal([2,4,6], 100)
 > False
 > ~~~
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > ~~~
 > > def is_sum_equal(number_list, sum_value):
 > >     count = 0
@@ -268,7 +268,7 @@ Of course, we can also add more functions. Let's add another, which performs
 a conversion from Fahrenheight to Kelvin. The formula looks like this:
 
 
-{.python}
+{: .python}
 ~~~
 kelvin = ((fahr - 32) * (5/9)) + 273.15
 ~~~
@@ -280,7 +280,7 @@ function for the unit conversion, and add 273.15 to that to get Kelvin. So
 our new function becomes:
 
 
-{.python}
+{: .python}
 ~~~
 def fahr_to_kelvin(fahr):
     # apply standard Fahrenheit to Kelvin formula
@@ -293,7 +293,7 @@ needs to call that one). We can then amend our code to also call that new
 function and output the result. Our code then becomes (*see `climate_analysis-7.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -355,7 +355,7 @@ If the first thing in a function is a string that isn't assigned to a variable,
 that string is attached to the function as its documentation (*see `temp_conversion.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 """A library to perform temperature conversions"""
 
@@ -391,7 +391,7 @@ So how would we use this module and its functions in code?
 We do this by `import`ing the module into Python.
 
 
-{.python}
+{: .python}
 ~~~
 Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41)
 [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
@@ -404,7 +404,7 @@ explanations directly from the interpreter which can be useful. Following on
 from the above:
 
 
-{.python}
+{: .python}
 ~~~
 >>> help(temp_conversion)
 ~~~
@@ -444,7 +444,7 @@ is a more conventional, general term for a set of routines in any language.
 Similarly, for Docstrings in functions, e.g.:
 
 
-{.python}
+{: .python}
 ~~~
 >>> help(temp_conversion.fahr_to_celsius)
 ~~~
@@ -471,7 +471,7 @@ And then we need to `import` that function from our module into our script, so
 we can use it (*see `climate_analysis-8.py`*).
 
 
-{.python}
+{: .python}
 ~~~
 import temp_conversion
 
@@ -498,7 +498,7 @@ function, we need to prefix the function with its `temp_conversion` module name.
 
 Again, the results should be the same as before.
 
-> ## Readable Code {.challenge}
+> ## Readable Code {: .challenge}
 >
 > Revise a function you wrote for one of the previous exercises to try to make
 > the code more readable. Then, collaborate with one of your neighbors

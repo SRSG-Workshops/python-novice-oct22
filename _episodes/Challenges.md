@@ -5,12 +5,12 @@ title: Challenges
 
 >## Python basics: Variables, Objects, Arrays, Lists etc
 
-> #### What's inside the box? {.challenge}
+> #### What's inside the box? {: .challenge}
 >
 > Draw diagrams showing what variables refer to what values after each statement in the following program:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > weight = 70.5
 > age = 35
@@ -19,12 +19,12 @@ title: Challenges
 > age = age + 20
 > ~~~
 
-> #### Sorting out references {.challenge}
+> #### Sorting out references {: .challenge}
 >
 > What does the following program print out?
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > first, second = 'Grace', 'Hopper'
 > third, fourth = second, first
@@ -34,7 +34,7 @@ title: Challenges
 
 >## Arrays, Lists, etc.
 
-> #### Slicing strings {.challenge}
+> #### Slicing strings {: .challenge}
 >
 > What is the value of `element[:4]`?
 > What about `element[4:]`?
@@ -45,19 +45,19 @@ title: Challenges
 > Given those answers,
 > explain what `element[1:-1]` does.
 
-> #### Slicing From the End {.challenge}
+> #### Slicing From the End {: .challenge}
 >
 > Use slicing to access only the last four characters of a string or entries of a list.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > string_for_slicing = "Observation date: 02-Feb-2013"
 > list_for_slicing = [["fluorine", "F"], ["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
 >
 >
-{.output}
+{: .output}
 ~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
@@ -69,7 +69,7 @@ title: Challenges
 > lengths)?
 > If not, try to change your approach to make it more robust.
 
-> #### Overloading {.challenge}
+> #### Overloading {: .challenge}
 >
 > `+` usually means addition, but when used on strings or lists, it means
 > "concatenate".
@@ -77,7 +77,7 @@ title: Challenges
 > In particular, what will be the output of the following code?
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > counts = [2, 4, 6, 8, 10]
 > repeats = counts * 2
@@ -96,7 +96,7 @@ title: Challenges
 
 >## Repeating actions using loops
 
-> #### From 1 to N {.challenge}
+> #### From 1 to N {: .challenge}
 >
 > Python has a built-in function called `range` that creates a list of numbers:
 > `range(3)` produces `[0, 1, 2]`, `range(2, 5)` produces `[2, 3, 4]`.
@@ -104,19 +104,19 @@ title: Challenges
 > write a loop to print the first 3 natural numbers:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > 1
 > 2
 > 3
 > ~~~
 
-> #### Turn a String Into a List {.challenge}
+> #### Turn a String Into a List {: .challenge}
 >
 > Use a for-loop to convert the string "hello" into a list of letters:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > ["h", "e", "l", "l", "o"]
 > ~~~
@@ -124,17 +124,17 @@ title: Challenges
 > Hint: You can create an empty list like this:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > my_list = []
 > ~~~
 
-> #### Computing powers with loops {.challenge}
+> #### Computing powers with loops {: .challenge}
 >
 > Exponentiation is built into Python:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > print(5 ** 3)
 >125
@@ -142,14 +142,14 @@ title: Challenges
 >
 >Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
 
-> #### Reverse a string {.challenge}
+> #### Reverse a string {: .challenge}
 >
 > Write a loop that takes a string, and produces a new string with the characters in reverse order, so `Newton` becomes `notweN`.
 
 
 >## Making choices
 
-> #### How many paths? {.challenge}
+> #### How many paths? {: .challenge}
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
@@ -159,7 +159,7 @@ title: Challenges
 > * B and C
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > if 4 > 5:
 >     print('A')
@@ -169,7 +169,7 @@ title: Challenges
 >     print('C')
 > ~~~
 
-> ## What Is Truth? {.challenge}
+> ## What Is Truth? {: .challenge}
 >
 > `True` and `False` are special words in Python called `booleans`
 > which represent true and false statements.
@@ -179,7 +179,7 @@ title: Challenges
 > explain what the rule is for which values are considered true and which are considered false.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > if '':
 >     print('empty string is true')
@@ -198,7 +198,7 @@ title: Challenges
 
 > ## Modularising your code using functions
 
-> #### Combining Strings {.challenge}
+> #### Combining Strings {: .challenge}
 >
 > "Adding" two strings produces their concatenation:
 > `'a' + 'b'` is `'ab'`.
@@ -208,18 +208,18 @@ title: Challenges
 > A call to your function should look like this:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > print(fence('name', '*'))
 > ~~~
 >
 >
-{.output}
+{: .output}
 ~~~
 > *name*
 > ~~~
 
-> ## How do function parameters work? {.challenge}
+> ## How do function parameters work? {: .challenge}
 >
 > We actually used the same variable name `fahr` in our main code and
 > and the function. But it's important to note that even though they
@@ -232,7 +232,7 @@ title: Challenges
 > For example, what would be the output from the following:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > f = 0
 > k = 0
@@ -252,7 +252,7 @@ title: Challenges
 > 3. 0
 >
 
-> ## Does the sum of a list equal a given value? {.challenge}
+> ## Does the sum of a list equal a given value? {: .challenge}
 >
 > Write a function to take a list of numbers and another value, and return
 > whether or not the sum of the list of numbers is equal to that value.
@@ -260,7 +260,7 @@ title: Challenges
 > Following the function definition, a call to your function should look like this:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > is_sum_equal([1,2,3], 6))
 > True
@@ -272,7 +272,7 @@ title: Challenges
 > conflicts with variable names that are defined outside of our function
 > that may cause it to behave incorrectly.
 
-> ## Readable Code {.challenge}
+> ## Readable Code {: .challenge}
 >
 > Revise a function you wrote for one of the previous exercises to try to make
 > the code more readable. Then, collaborate with one of your neighbors
@@ -283,7 +283,7 @@ title: Challenges
 
 > ## How to deal with problems in your code
 
-> #### Identifying Variable Name Errors {.challenge}
+> #### Identifying Variable Name Errors {: .challenge}
 >
 > 1. Read the code below (or open the file `error_name_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message.
@@ -295,7 +295,7 @@ title: Challenges
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > for number in range(10):
 >     # use a if the number is a multiple of 3, otherwise use b
@@ -306,7 +306,7 @@ title: Challenges
 > print(message)
 > ~~~
 
-> #### Identifying Syntax Errors {.challenge}
+> #### Identifying Syntax Errors {: .challenge}
 >
 > 1. Read the code below (or open the file `error_syntax_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. Is it a `SyntaxError` or an `IndentationError`?
@@ -314,7 +314,7 @@ title: Challenges
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > def another_function
 >   print("Syntax errors are annoying.")
@@ -322,20 +322,20 @@ title: Challenges
 >   print("So they are usually not too hard to fix.")
 > ~~~
 
-> #### Identifying Index Errors {.challenge}
+> #### Identifying Index Errors {: .challenge}
 >
 > 1. Read the code below, and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. What type of error is it?
 > 3. Fix the error.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
 
-> #### Reading Error Messages {.challenge}
+> #### Reading Error Messages {: .challenge}
 >
 > Read the python code (or open the file `error_index_ch.py` in code folder) and the resulting traceback below, and answer the following questions:
 >
@@ -346,7 +346,7 @@ title: Challenges
 > 5.  What is the error message?
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > # This code has an intentional error. Do not type it directly;
 > # use it for reference to understand the error message below.
@@ -376,14 +376,14 @@ title: Challenges
 > KeyError: 'Friday'
 > ~~~
 
-> #### Debug with a Neighbour {.challenge}
+> #### Debug with a Neighbour {: .challenge}
 >
 > Take a function that you have written today, and introduce a tricky bug.
 > Your function should still run, but will give the wrong output.
 > Switch seats with your neighbor and attempt to identify - or debug - the problem
 > that they introduced into their function.
 
-> #### Not Supposed to be the Same {.challenge}
+> #### Not Supposed to be the Same {: .challenge}
 >
 > You are assisting a researcher with Python code that computes the
 > Body Mass Index (BMI) of patients (open the file `error_silent_ch.py` in code folder).  The researcher is concerned because
@@ -392,7 +392,7 @@ title: Challenges
 > divided by the the square of **height in metres**.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
 >
@@ -406,7 +406,7 @@ title: Challenges
 > ~~~
 >
 >
-{.output}
+{: .output}
 ~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
@@ -416,7 +416,7 @@ title: Challenges
 
 >## Reading and analysing Patient data using libraries
 
-> #### Thin slices {.challenge}
+> #### Thin slices {: .challenge}
 >
 > From our previous topic challenges, the expression `element[3:3]` produces an [empty string](../../reference.html#empty-string),
 > i.e., a string that contains no characters.
@@ -427,18 +427,18 @@ title: Challenges
 
 >## Data Visualisation
 
-> #### Make your own plot {.challenge}
+> #### Make your own plot {: .challenge}
 >
 > Create a plot showing the standard deviation of the inflammation data for each day across all patients.
 > Hint: `data.std(axis=0)` gives you standard deviation.
 
-> #### Moving plots around {.challenge}
+> #### Moving plots around {: .challenge}
 >
 > Modify the program to display the three plots on top of one another instead of side by side.
 
 >## Making choices
 
-> #### How many paths? {.challenge}
+> #### How many paths? {: .challenge}
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
@@ -448,7 +448,7 @@ title: Challenges
 > * B and C
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > if 4 > 5:
 >     print('A')

@@ -4,7 +4,7 @@ title: Handling Errors
 minutes: 30
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Be able to read and understand how Python reports errors through tracebacks
@@ -27,14 +27,14 @@ called a [traceback](reference.html#traceback).
 Let's examine one:
 
 
-{.python}
+{: .python}
 ~~~
 print(a)
 ~~~
 
-{.error}
+{: .error}
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -56,13 +56,13 @@ there are a few very common reasons why you might have an undefined variable.
 The first is that you meant to use a [string](reference.html/#string), but forgot to put quotes around it:
 
 
-{.python}
+{: .python}
 ~~~
 print(hello)
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -74,7 +74,7 @@ In the following example,
 `count` should have been defined (e.g., with `count = 0`) before the for loop:
 
 
-{.python}
+{: .python}
 ~~~
 for number in range(10):
     count = count + number
@@ -82,7 +82,7 @@ print("The count is:", count)
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
@@ -96,7 +96,7 @@ Remember that variables are [case-sensitive](reference.html/#case-sensitive),
 so the variable `count` is different from `Count`. We still get the same error, because we still have not defined `count`:
 
 
-{.python}
+{: .python}
 ~~~
 Count = 0
 for number in range(10):
@@ -105,14 +105,14 @@ print("The count is:", count)
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 2, in <module>
 NameError: name 'count' is not defined
 ~~~
 
-> ## Identifying Variable Name Errors {.challenge}
+> ## Identifying Variable Name Errors {: .challenge}
 >
 > 1. Read the code below (or open the file `error_name_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message.
@@ -124,7 +124,7 @@ NameError: name 'count' is not defined
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > for number in range(10):
 >     # use a if the number is a multiple of 3, otherwise use b
@@ -135,7 +135,7 @@ NameError: name 'count' is not defined
 > print(message)
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > 3 `NameError`s for `number` being misspelled, for `message` not defined, and for `a` not being in quotes.
 > >
 > > Fixed version:
@@ -172,7 +172,7 @@ it will just give up and inform you with an error.
 For example:
 
 
-{.python}
+{: .python}
 ~~~
 def some_function()
     msg = "hello, world!"
@@ -197,7 +197,7 @@ we see that there is *also* an `IndentationError`,
 which means that the lines in the function definition do not all have the same indentation:
 
 
-{.python}
+{: .python}
 ~~~
 def some_function():
     msg = "hello, world!"
@@ -216,7 +216,7 @@ Both `SyntaxError` and `IndentationError` indicate a problem with the syntax of 
 but an `IndentationError` is more specific:
 it *always* means that there is a problem with how your code is indented.
 
-> ## Tabs and Spaces {.callout}
+> ## Tabs and Spaces {: .callout}
 >
 > A quick note on indentation errors:
 > they can sometimes be insidious,
@@ -228,7 +228,7 @@ it *always* means that there is a problem with how your code is indented.
 > while the third line uses four spaces:
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > def some_function():
 >     msg = "hello, world!"
@@ -248,7 +248,7 @@ it *always* means that there is a problem with how your code is indented.
 > In general, it is better to just never use tabs and always use spaces,
 > because it can make things very confusing.
 
-> ## Identifying Syntax Errors {.challenge}
+> ## Identifying Syntax Errors {: .challenge}
 >
 > 1. Read the code below (or open the file `error_syntax_ch.py` in code folder), and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. Is it a `SyntaxError` or an `IndentationError`?
@@ -256,7 +256,7 @@ it *always* means that there is a problem with how your code is indented.
 > 4. Repeat steps 2 and 3, until you have fixed all the errors.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > def another_function
 >   print("Syntax errors are annoying.")
@@ -264,13 +264,13 @@ it *always* means that there is a problem with how your code is indented.
 >   print("So they are usually not too hard to fix.")
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > `SyntaxError` for missing `():` at end of first line,
 > `IndentationError` for mismatch between second and third lines.
 > > A fixed version is:
 > >
 > >
-> {.python}
+> {: .python}
 > ~~~
 > > def another_function():
 > >     print("Syntax errors are annoying.")
@@ -290,7 +290,7 @@ you might be a bit annoyed.
 Python gets similarly annoyed if you try to ask it for an item that doesn't exist:
 
 
-{.python}
+{: .python}
 ~~~
 letters = ['a', 'b', 'c']
 print("Letter #1 is", letters[0])
@@ -300,7 +300,7 @@ print("Letter #4 is", letters[3])
 ~~~
 
 
-{.output}
+{: .output}
 ~~~
 Letter #1 is a
 Letter #2 is b
@@ -308,7 +308,7 @@ Letter #3 is c
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -319,25 +319,25 @@ Here,
 Python is telling us that there is an `IndexError` in our code,
 meaning we tried to access a list index that did not exist.
 
-> ## Identifying Index Errors {.challenge}
+> ## Identifying Index Errors {: .challenge}
 >
 > 1. Read the code below, and (without running it) try to identify what the errors are.
 > 2. Run the code, and read the error message. What type of error is it?
 > 3. Fix the error.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > print('My favorite season is ', seasons[4])
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > `IndexError`; the last entry is `seasons[3]`, so `seasons[4]` doesn't make sense.
 > > A fixed version is:
 > >
 > >
-> {.python}
+> {: .python}
 > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[-1])
@@ -347,7 +347,7 @@ meaning we tried to access a list index that did not exist.
 Here's another example of Index Error.
 
 
-{.python}
+{: .python}
 ~~~
 # This code has an intentional error. You can type it directly or
 # use it for reference to understand the error message below.
@@ -363,7 +363,7 @@ favorite_ice_cream()
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -387,7 +387,7 @@ So, in this case, the program first performed a [function call](reference.html/#
 Inside this function,
 the program encountered an error on Line 6, when it tried to run the code `print(ice_creams[3])`.
 
-> ## Long Tracebacks {.callout}
+> ## Long Tracebacks {: .callout}
 >
 > Sometimes, you might see a traceback that is very long -- sometimes they might even be 20 levels deep!
 > This can make it seem like something horrible happened,
@@ -419,7 +419,7 @@ as it is possible to create custom errors.
 In that case,
 hopefully the custom error message is informative enough to help you figure out what went wrong.
 
-> ## Reading Error Messages {.challenge}
+> ## Reading Error Messages {: .challenge}
 >
 > Read the python code (or open the file `error_index_ch.py` in code folder) and the resulting traceback below, and answer the following questions:
 >
@@ -430,7 +430,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > 5.  What is the error message?
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > # This code has an intentional error. Do not type it directly;
 > # use it for reference to understand the error message below.
@@ -463,7 +463,7 @@ hopefully the custom error message is informative enough to help you figure out 
 > KeyError: 'Friday'
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > 1. 3 levels
 > > 2. `print_message`
 > > 3. 11
@@ -479,7 +479,7 @@ Some defects can cause output to be incorrect, and display no error message.
 Consider the following code (which you can find in `normalize.py` in the code directory):
 
 
-{.python}
+{: .python}
 ~~~
 def normalize_rectangle(rect):
     '''Normalizes a rectangle so that it is at the origin and 1.0 units long on its longest axis.'''
@@ -500,7 +500,7 @@ def normalize_rectangle(rect):
 So if we normalize a rectangle that is taller than it is wide...:
 
 
-{.python}
+{: .python}
 ~~~
 from normalize import normalize_rectangle
 print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
@@ -509,7 +509,7 @@ print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
 ...everything seems ok:
 
 
-{.output}
+{: .output}
 ~~~
 (0, 0, 0.2, 1.0)
 ~~~
@@ -517,7 +517,7 @@ print(normalize_rectangle( (0.0, 0.0, 1.0, 5.0) ))
 And if we normalize one that's wider than it is tall:
 
 
-{.python}
+{: .python}
 ~~~
 print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0) ))
 ~~~
@@ -525,7 +525,7 @@ print(normalize_rectangle( (0.0, 0.0, 5.0, 1.0) ))
 Everything still seems... wait a minute!
 
 
-{.output}
+{: .output}
 ~~~
 (0, 0, 1.0, 5.0)
 ~~~
@@ -533,14 +533,14 @@ Everything still seems... wait a minute!
 Since the longest axis should be 1.0, we can see this is incorrect.
 Looking at our code, line 8 should divide dy by dx.
 
-> ## Debug with a Neighbour {.challenge}
+> ## Debug with a Neighbour {: .challenge}
 >
 > Take a function that you have written today, and introduce a tricky bug.
 > Your function should still run, but will give the wrong output.
 > Switch seats with your neighbor and attempt to identify - or debug - the problem
 > that they introduced into their function.
 >
-> ## Not Supposed to be the Same {.challenge}
+> ## Not Supposed to be the Same {: .challenge}
 >
 > You are assisting a researcher with Python code that computes the
 > Body Mass Index (BMI) of patients (open the file `error_silent_ch.py` in code folder).  The researcher is concerned because
@@ -549,7 +549,7 @@ Looking at our code, line 8 should divide dy by dx.
 > divided by the the square of **height in metres**.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > patients = [[70, 1.8], [80, 1.9], [150, 1.7]]
 >
@@ -563,7 +563,7 @@ Looking at our code, line 8 should divide dy by dx.
 > ~~~
 >
 >
-{.output}
+{: .output}
 ~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
@@ -610,13 +610,13 @@ More generally, problems with input and output manifest as
 `IOError`s or `OSError`s, depending on the version of Python you use.
 
 
-{.python}
+{: .python}
 ~~~
 file_handle = open('myfile.txt', 'r')
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
@@ -642,14 +642,14 @@ you will get an `UnsupportedOperation` error
 telling you that the file was not opened for reading:
 
 
-{.python}
+{: .python}
 ~~~
 file_handle = open('myfile.txt', 'w')
 file_handle.read()
 ~~~
 
 
-{.error}
+{: .error}
 ~~~
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>

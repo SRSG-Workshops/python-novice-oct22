@@ -4,7 +4,7 @@ title: Python Basics
 minutes: 15
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Introduction to running the Python interpreter
@@ -24,7 +24,7 @@ But as you progress to more interesting and complex things you need to move over
 You start the Python interpreter from the shell by:
 
 
-{.bash}
+{: .bash}
 ~~~
 $ python
 ~~~
@@ -32,7 +32,7 @@ $ python
 And then you are presented with something like:
 
 
-{.output}
+{: .output}
 ~~~
 Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41)
 [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
@@ -47,7 +47,7 @@ But shell commands won't work again until we exit the interpreter.
 You can exit the interpreter and get back to the shell by typing:
 
 
-{.python}
+{: .python}
 ~~~
 >>> exit()
 ~~~
@@ -56,7 +56,7 @@ You can exit the interpreter and get back to the shell by typing:
 Then you'll see:
 
 
-{.output}
+{: .output}
 ~~~
 $
 ~~~
@@ -66,7 +66,7 @@ Phew - back to the shell!
 But let's get back to the Python interpreter and learn about variables in Python:
 
 
-{.bash}
+{: .bash}
 ~~~
 $ python
 ~~~
@@ -74,7 +74,7 @@ $ python
 And we're back to the Python interpreter:
 
 
-{.output}
+{: .output}
 ~~~
 Python 3.4.3 |Anaconda 2.3.0 (x86_64)| (default, Mar  6 2015, 12:07:41)
 [GCC 4.2.1 (Apple Inc. build 5577)] on darwin
@@ -95,7 +95,7 @@ a single value.
 The line below assigns a value to a variable:
 
 
-{.python}
+{: .python}
 ~~~
 weight_kg = 55
 ~~~
@@ -103,12 +103,12 @@ weight_kg = 55
 Once a variable has a value, we can print it:
 
 
-{.python}
+{: .python}
 ~~~
 print(weight_kg)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 55
 ~~~
@@ -116,12 +116,12 @@ print(weight_kg)
 and do arithmetic with it:
 
 
-{.python}
+{: .python}
 ~~~
 print('weight in pounds:', 2.2 * weight_kg)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 weight in pounds: 121.0
 ~~~
@@ -133,13 +133,13 @@ If we reassign to `weight_kg`, we just move the tag to another object as shown b
 We can change a variable's value by assigning it a new one:
 
 
-{.python}
+{: .python}
 ~~~
 weight_kg = 57.5
 print('weight in kilograms is now:', weight_kg)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 weight in kilograms is now: 57.5
 ~~~
@@ -162,13 +162,13 @@ For example,
 let's store the subject's weight in pounds in a variable:
 
 
-{.python}
+{: .python}
 ~~~
 weight_lb = 2.2 * weight_kg
 print('weight in kilograms:', weight_kg, 'and in pounds:', weight_lb)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 weight in kilograms: 57.5 and in pounds: 126.5
 ~~~
@@ -178,13 +178,13 @@ weight in kilograms: 57.5 and in pounds: 126.5
 and then change `weight_kg`:
 
 
-{.python}
+{: .python}
 ~~~
 weight_kg = 100.0
 print('weight in kilograms is now:', weight_kg, 'and weight in pounds is still:', weight_lb)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 weight in kilograms is now: 100.0 and weight in pounds is still: 126.5
 ~~~
@@ -198,12 +198,12 @@ This is different from the way spreadsheets work.
 Although we commonly refer to `variables` even in Python (because it is the common terminology), we really mean `names` or `identifiers`. In Python, `variables` are name tags for values, not labelled boxes.
 
 
-> ## What's inside the box? {.challenge}
+> ## What's inside the box? {: .challenge}
 >
 > Draw diagrams showing what variables refer to what values after each statement
 > in the following program:
 >
-> {.python}
+> {: .python}
 > ~~~
 > weight = 70.5
 > age = 35
@@ -212,22 +212,22 @@ Although we commonly refer to `variables` even in Python (because it is the comm
 > age = age + 20
 > ~~~
 
-> ## Sorting out references {.challenge}
+> ## Sorting out references {: .challenge}
 >
 > What does the following program print out?
 >
-> {.python}
+> {: .python}
 > ~~~
 > first, second = 'Grace', 'Hopper'
 > ~~~
 >
-> {.output}
+> {: .output}
 > ~~~
 > first = Grace
 > second = Hopper
 > ~~~
 >
-> {.python}
+> {: .python}
 > ~~~
 > third, fourth = second, first
 > print(third, fourth)

@@ -5,7 +5,7 @@ minutes: 5
 ---
 
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > * Python coding conventions

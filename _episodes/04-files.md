@@ -4,7 +4,7 @@ title: Processing data files
 minutes: 15
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Write a script to open a data file and print out its contents.
@@ -32,7 +32,7 @@ file, and using a loop, print out each line. Let's write another script
 called `climate_analysis.py`, and enter the following (*see `climate_analysis-1.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -50,7 +50,7 @@ does something quite helpful in a loop. By specifying `climate_data` as our coll
 We can run our code with:
 
 
-{.bash}
+{: .bash}
 ~~~
 $ python climate_analysis.py
 ~~~
@@ -88,14 +88,14 @@ We can remove them by stripping them out, using `rstrip`, a function
 that works on strings. We can use it like:
 
 
-{.python}
+{: .python}
 ~~~
     print(line.rstrip())
 ~~~
 
 So what's happening here?
 
-> ## Python and object orientation - in a nutshell {.callout}
+> ## Python and object orientation - in a nutshell {: .callout}
 >
 > So far we've used strings, which are a type of object in Python.
 > In general, an object is an instance of something called a class.
@@ -132,7 +132,7 @@ So what's happening here?
 So, let's try that out (*see `climate_analysis-2.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -172,7 +172,7 @@ We've seen how we can trim trailing newlines from strings with `rstrip()` acting
 on a string object. Well, we use `split()` in exactly the same way:
 
 
-{.python}
+{: .python}
 ~~~
     data = line.split(',')
 ~~~
@@ -183,7 +183,7 @@ variable called `data`. We can access elements in that list as before.
 So, let's change our code accordingly (*see `climate_analysis-3.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
@@ -199,7 +199,7 @@ temperature, is the 4th column. But in Python list indexes start at 0, so in
 fact we need to obtain the value from `data[3]` and **not** `data[4]`. So, we
 have made a note to that effect in a *comment*.
 
-> ## How and when should you add a comment? {.callout}
+> ## How and when should you add a comment? {: .callout}
 >
 > The trick is to keep your audience in mind when writing code --- this could
 > be someone else in the lab, or perhaps someone in another institution. A

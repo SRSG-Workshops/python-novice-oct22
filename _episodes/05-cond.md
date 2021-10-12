@@ -4,7 +4,7 @@ title: Making choices
 minutes: 15
 ---
 
-{.objectives}
+{: .objectives}
 > ## Learning Objectives
 >
 > *   Write conditional statements including `if`, `elif`, and `else` branches.
@@ -19,7 +19,7 @@ We can ask Python to take different actions, depending on a condition, with an i
 (you'll need to type this in - don't copy and paste this code directly, it won't work):
 
 
-{.python}
+{: .python}
 ~~~
 num = 37
 if num > 100:
@@ -29,7 +29,7 @@ else:
 print("done")
 ~~~
 
-{.output}
+{: .output}
 ~~~
 not greater
 done
@@ -51,7 +51,7 @@ Python simply does nothing if the test is false
 (you'll need to type this in - don't copy and paste this code directly, it won't work):
 
 
-{.python}
+{: .python}
 ~~~
 num = 53
 print("before conditional...")
@@ -60,7 +60,7 @@ if num > 100:
 print("...after conditional")
 ~~~
 
-{.output}
+{: .output}
 ~~~
 before conditional...
 ...after conditional
@@ -70,7 +70,7 @@ We can also chain several tests together using `elif`,
 which is short for "else if" as shown in the example code chunk below:
 
 
-{.python}
+{: .python}
 ~~~
 num = -3
 if num > 0:
@@ -81,7 +81,7 @@ else:
     print("Sign of a number",num, "is:",-1)
 ~~~
 
-{.output}
+{: .output}
 ~~~
 sign of a number -3 is:  -1
 ~~~
@@ -101,7 +101,7 @@ We can also combine tests using `and` and `or`.
 `and` is only true if both parts are true:
 
 
-{.python}
+{: .python}
 ~~~
 if (1 > 0) and (-1 > 0):
     print("both parts are true")
@@ -109,7 +109,7 @@ else:
     print("one part is not true")
 ~~~
 
-{.output}
+{: .output}
 ~~~
 one part is not true
 ~~~
@@ -117,13 +117,13 @@ one part is not true
 while `or` is true if either part is true:
 
 
-{.python}
+{: .python}
 ~~~
 if (1 < 0) or ('left' < 'right'):
     print("at least one test is true")
 ~~~
 
-{.output}
+{: .output}
 ~~~
 at least one test is true
 ~~~
@@ -131,7 +131,7 @@ at least one test is true
 In this case,
 "either" means "either or both", not "either one or the other but not both".
 
-> ## How many paths? {.challenge}
+> ## How many paths? {: .challenge}
 >
 > Which of the following would be printed if you were to run this code? Why did you pick this answer?
 >
@@ -141,7 +141,7 @@ In this case,
 > * B and C
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > if 4 > 5:
 >     print('A')
@@ -151,11 +151,11 @@ In this case,
 >     print('C')
 > ~~~
 >
-> > ## Solution {.solution}
+> > ## Solution {: .solution}
 > > C gets printed because the first two conditions, `4 > 5` and `4 == 5`, are not true,
 > > but `4 < 5` is true.
 
-> ## What Is Truth? {.challenge}
+> ## What Is Truth? {: .challenge}
 >
 > `True` and `False` are special words in Python called `booleans`
 > which represent true and false statements.
@@ -165,7 +165,7 @@ In this case,
 > explain what the rule is for which values are considered true and which are considered false.
 >
 >
-> {.python}
+> {: .python}
 > ~~~
 > if '':
 >     print('empty string is true')
@@ -198,7 +198,7 @@ true.
 Consider the following example:
 
 
-{.python}
+{: .python}
 ~~~
 from random import randint
 number = 0
@@ -230,7 +230,7 @@ a '#' (which denotes a comment line), and if so, avoid printing it out.
 So let's use an `if` statement to do that (*see `climate_analysis-4.py`*):
 
 
-{.python}
+{: .python}
 ~~~
 climate_data = open('../data/sc_climate_data_10.csv', 'r')
 
