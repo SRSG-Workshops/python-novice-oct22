@@ -278,8 +278,8 @@ it *always* means that there is a problem with how your code is indented.
 > > A fixed version is:
 > >
 > >
-> {: .python}
-> ~~~
+> > {: .python}
+> > ~~~
 > > def another_function():
 > >     print("Syntax errors are annoying.")
 > >     print("But at least python tells us about them!")
