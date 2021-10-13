@@ -242,6 +242,7 @@ python climate_analysis.py ../data/sc_climate_data_1000.csv | wc -l
 Which tells us the number of lines it processed, taking into account the
 -9999 values it ignored:
 
+{: .output}
 ~~~
      923
 ~~~
