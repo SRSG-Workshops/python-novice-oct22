@@ -61,7 +61,7 @@ title: Challenges
 > ~~~
 >
 >
-{: .output}
+> {: .output}
 > ~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
