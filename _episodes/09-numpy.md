@@ -42,7 +42,7 @@ we need to [import](../../reference.html#import) a library called NumPy.
 In general you should use this library if you want to do fancy things with numbers,
 especially if you have matrices.
 
-Let's start by ensuring we are in the `python/novice' directory, e.g.:
+Let's start by ensuring we are in the `swc-python-novice-websci/' directory, e.g.:
 
 
 {: .bash}
@@ -54,7 +54,7 @@ And we should see:
 
 {: .output}
 ~~~
-/Users/nelle/2015-12-15-southampton/novice/python
+/Users/nelle/swc-python-novice-websci
 ~~~
 
 First, let's go into the `code` subdirectory, and run the Python interpreter.

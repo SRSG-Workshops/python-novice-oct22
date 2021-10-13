@@ -183,6 +183,14 @@ print(glob.glob('*.html'))
 ['01-numpy.html', '02-loop.html', '03-lists.html', '04-files.html', '05-cond.html', '06-func.html', '07-errors.html', '08-defensive.html', '09-debugging.html', '10-cmdline.html', 'index.html', 'LICENSE.html', 'instructors.html', 'README.html', 'discussion.html', 'reference.html']
 ~~~
 
+{: .challange}
+> Your output may have been different it depends on what folder you are in and what filetype you search for.
+> Try using different filetypes and see what you find eg.
+> {:. python}
+> ~~~
+> print(glob.glob('*.py'))
+> ~~~
+
 As these examples show,
 `glob.glob`'s result is a list of strings,
 which means we can loop over it
