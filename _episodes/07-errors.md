@@ -348,12 +348,11 @@ meaning we tried to access a list index that did not exist.
 > > A fixed version is:
 > >
 > >
-> {: .python}
-> ~~~
+> > {: .python}
+> > ~~~
 > > seasons = ['Spring', 'Summer', 'Fall', 'Winter']
 > > print('My favorite season is ', seasons[-1])
 > > ~~~
->
 
 Here's another example of Index Error.
 
