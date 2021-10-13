@@ -34,7 +34,7 @@ pyplot.show()
 pyplot keeps track of the graph as we are building it, so when we do `pyplot.show()` it's
 just showing us what's been built so far.
 
-![Heatmap of the Data](01-numpy_files/novice/python/01-numpy_74_0.png)
+![Heatmap of the Data](../fig/01-numpy_74_0.png)
 
 Blue regions in this heat map are low values, while red shows high values.
 As we can see, inflammation rises and falls over a 40-day period.
@@ -60,7 +60,7 @@ pyplot.plot(ave_inflammation)
 pyplot.show()
 ~~~
 
-![Average Inflammation Over Time](01-numpy_files/novice/python/01-numpy_76_0.png)
+![Average Inflammation Over Time](../fig/01-numpy_76_0.png)
 
 Here,
 we have put the average per day across all patients in the variable `ave_inflammation`,
@@ -78,7 +78,7 @@ pyplot.plot(data.max(axis=0))
 pyplot.show()
 ~~~
 
-![Maximum Value Along The First Axis](01-numpy_files/novice/python/01-numpy_78_1.png)
+![Maximum Value Along The First Axis](../fig/01-numpy_78_1.png)
 
 
 {: .python}
@@ -87,7 +87,7 @@ pyplot.plot(data.min(axis=0))
 pyplot.show()
 ~~~
 
-![Minimum Value Along The First Axis](01-numpy_files/novice/python/01-numpy_78_3.png)
+![Minimum Value Along The First Axis](../fig/01-numpy_78_3.png)
 
 The maximum value rises and falls perfectly smoothly,
 while the minimum seems to be a step function.
@@ -95,7 +95,7 @@ Neither result seems particularly likely,
 so either there's a mistake in our calculations
 or something is wrong with our data.
 
-It's very common to create an [alias](../../reference.html#alias) for a library when importing it
+It's very common to create an alias for a library when importing it
 in order to reduce the amount of typing we have to do.
 Here are our three plots side by side using aliases for `numpy` and `pyplot`:
 
@@ -128,12 +128,15 @@ plt.show()
 
 Running the above code (present under `code` directory in the file `three-plots.py`) may throw the warning as below. If you see the warning, please ignore it.
 
+{: .error}
+~~~
 `/Users/user/anaconda/lib/python3.4/site-packages/matplotlib/tight_layout.py:225: UserWarning: tight_layout : falling back to Agg renderer
   warnings.warn("tight_layout : falling back to Agg renderer")`
+~~~
 
 `tight_layout` still works by falling back to a different way of generating the graph (the Agg renderer).
 
-![The Previous Plots as Subplots](01-numpy_files/novice/python/01-numpy_83_0.png)
+![The Previous Plots as Subplots](../fig/01-numpy_83_0.png)
 
 The call to `loadtxt` reads our data,
 and the rest of the program tells the plotting library
