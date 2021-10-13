@@ -581,7 +581,7 @@ Looking at our code, line 8 should divide dy by dx.
 > ~~~
 >
 >
-{: .output}
+>{: .output}
 > ~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
