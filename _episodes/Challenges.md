@@ -3,13 +3,12 @@ layout: page
 title: Challenges
 ---
 
->## Python basics: Variables, Objects, Arrays, Lists etc
+## Python basics: Variables, Objects, Arrays, Lists etc
 
 {: .challenge}
 > #### What's inside the box?
 >
 > Draw diagrams showing what variables refer to what values after each statement in the following program:
->
 >
 > {: .python}
 > ~~~
@@ -34,7 +33,7 @@ title: Challenges
 > ~~~
 
 
->## Arrays, Lists, etc.
+## Arrays, Lists, etc.
 
 {: .challenge}
 > #### Slicing strings
@@ -47,6 +46,7 @@ title: Challenges
 > What is `element[-2]`?
 > Given those answers,
 > explain what `element[1:-1]` does.
+
 
 {: .challenge}
 > #### Slicing From the End
@@ -62,7 +62,7 @@ title: Challenges
 >
 >
 {: .output}
-~~~
+> ~~~
 > "2013"
 > [["chlorine", "Cl"], ["bromine", "Br"], ["iodine", "I"], ["astatine", "At"]]
 > ~~~
@@ -145,7 +145,7 @@ title: Challenges
 > {: .python}
 > ~~~
 > print(5 ** 3)
->125
+> 125
 > ~~~
 >
 >Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
@@ -153,10 +153,11 @@ title: Challenges
 {: .challenge}
 > #### Reverse a string
 >
-> Write a loop that takes a string, and produces a new string with the characters in reverse order, so `Newton` becomes `notweN`.
+> Write a loop that takes a string, and produces a new string with the characters in reverse order, so `Newton`
+> becomes `notweN`.
 
 
->## Making choices
+## Making choices
 
 {: .challenge}
 > #### How many paths?
@@ -226,8 +227,8 @@ title: Challenges
 > ~~~
 >
 >
-{: .output}
-~~~
+> {: .output}
+> ~~~
 > *name*
 > ~~~
 
@@ -263,7 +264,6 @@ title: Challenges
 > 1. 20
 > 2. 80
 > 3. 0
->
 
 {: .challenge}
 > ## Does the sum of a list equal a given value?
@@ -296,7 +296,7 @@ title: Challenges
 > could be further improved to make them more readable.
 
 
-> ## How to deal with problems in your code
+## How to deal with problems in your code
 
 {: .challenge}
 > #### Identifying Variable Name Errors
@@ -321,7 +321,8 @@ title: Challenges
 >         message = message + "b"
 > print(message)
 > ~~~
->
+
+
 {: .challenge}
 > #### Identifying Syntax Errors
 >
@@ -338,7 +339,8 @@ title: Challenges
 >    print("But at least python tells us about them!")
 >   print("So they are usually not too hard to fix.")
 > ~~~
->
+
+
 {: .challenge}
 > #### Identifying Index Errors
 >
@@ -427,8 +429,8 @@ title: Challenges
 > ~~~
 >
 >
-{: .output}
-~~~
+> {: .output}
+> ~~~
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
 > Patient's BMI is: 21.604938
