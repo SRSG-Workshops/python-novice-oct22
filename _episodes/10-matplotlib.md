@@ -202,19 +202,21 @@ Let's test it by analyzing the first three files in the list:
 
 {: .python}
 ~~~
-import numpy
-import matplotlib
-from matplotlib import pyplot as plt
 import glob
 
+import numpy as np
+from matplotlib import pyplot as plt
+
 filenames = glob.glob('../data/inflammation-*.csv')
+filenames.sort()
 filenames = filenames[0:3]
+
 for filename in filenames:
-    print(f)
+    print(filename)
 
-    data = numpy.loadtxt(fname=filename, delimiter=',')
+    data = np.loadtxt(fname=filename, delimiter=',')
 
-    fig = matplotlib.pyplot.figure(figsize=(10.0, 3.0))
+    fig = plt.figure(figsize=(10.0, 3.0))
 
     axes1 = fig.add_subplot(1, 3, 1)
     axes2 = fig.add_subplot(1, 3, 2)
@@ -232,7 +234,6 @@ for filename in filenames:
     fig.tight_layout()
     plt.show()
 ~~~
-
 
 {: .output}
 ~~~
