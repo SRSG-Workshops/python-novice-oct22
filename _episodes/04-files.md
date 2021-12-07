@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Processing data files
+slug: python-novice-processing-data-files
 minutes: 15
 ---
 

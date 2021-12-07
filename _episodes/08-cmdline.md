@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Command-Line Programs
+slug: python-novice-command-line-programs
 minutes: 10
 ---
 

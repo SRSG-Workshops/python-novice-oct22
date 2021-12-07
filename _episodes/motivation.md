@@ -1,6 +1,7 @@
 ---
 layout: episode
 title: Why Python?
+slug: python-novice-why-python?
 ---
 
 ## Why Python?

@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Python Style Guide
+slug: python-novice-python-style-guide
 minutes: 5
 ---
 

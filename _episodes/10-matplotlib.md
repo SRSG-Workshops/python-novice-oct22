@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Data Visualisation
+slug: python-novice-data-visualisation
 minutes: 5
 ---
 

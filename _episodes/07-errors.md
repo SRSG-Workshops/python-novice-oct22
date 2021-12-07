@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Handling Errors
+slug: python-novice-handling-errors
 minutes: 30
 ---
 

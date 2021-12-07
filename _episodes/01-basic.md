@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Python Basics
+slug: python-novice-python-basics
 minutes: 15
 ---
 
