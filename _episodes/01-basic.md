@@ -3,6 +3,7 @@ layout: page
 title: Python Basics
 slug: python-novice-python-basics
 minutes: 15
+teaching: 15
 ---
 
 {: .objectives}

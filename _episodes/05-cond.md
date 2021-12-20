@@ -3,6 +3,7 @@ layout: page
 title: Making choices
 slug: python-novice-making-choices
 minutes: 15
+teaching: 15
 ---
 
 {: .objectives}
