@@ -1,9 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Processing data files
 slug: python-novice-processing-data-files
 minutes: 15
 teaching: 15
+exercises: 0
 ---
 
 {: .objectives}

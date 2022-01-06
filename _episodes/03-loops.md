@@ -1,9 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Repeating actions using loops
 slug: python-novice-repeating-actions-using-loops
 minutes: 15
 teaching: 15
+exercises: 0
 ---
 
 {: .objectives}

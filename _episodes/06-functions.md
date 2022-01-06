@@ -1,9 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Modularising your code using functions
 slug: python-novice-modularising-your-code-using-functions
 minutes: 15
 teaching: 15
+exercises: 0
 ---
 
 {: .objectives}
