@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Challenges
+slug: python-novice-challenges
 ---
 
 ## Python basics: Variables, Objects, Arrays, Lists etc

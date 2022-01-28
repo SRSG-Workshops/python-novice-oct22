@@ -1,7 +1,10 @@
 ---
-layout: page
+# layout: episode
 title: Arrays, Lists etc
+slug: python-novice-arrays-lists-etc
 minutes: 15
+teaching: 15
+exercises: 0
 ---
 
 {: .objectives}

@@ -1,7 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Handling Errors
+slug: python-novice-handling-errors
 minutes: 30
+teaching: 30
+exercises: 0
 ---
 
 {: .objectives}

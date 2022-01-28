@@ -1,7 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Python Style Guide
+slug: python-novice-python-style-guide
 minutes: 5
+teaching: 5
+exercises: 0
 ---
 
 

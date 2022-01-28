@@ -1,7 +1,10 @@
 ---
-layout: page
+# layout: page
 title: Command-Line Programs
+slug: python-novice-command-line-programs
 minutes: 10
+teaching: 10
+exercises: 0
 ---
 
 {: .objectives}
