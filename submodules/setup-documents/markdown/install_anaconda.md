@@ -1,4 +1,3 @@
-# Setup for Python Lesson
 ## Python Setup ##
 
 IDEs: PyCharm, Spyder, VS Code
