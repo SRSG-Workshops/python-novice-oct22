@@ -10,4 +10,5 @@ If the issue is urgent email rsginfo@soton.ac.uk
 You may delete these instructions from your comment.
 
 \- Southampton Research Software Group
-</details>in
+</details>
+

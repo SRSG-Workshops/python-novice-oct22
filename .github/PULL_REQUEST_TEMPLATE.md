@@ -1,4 +1,3 @@
-
 <details>
 <summary><strong>Instructions</strong></summary>
 
