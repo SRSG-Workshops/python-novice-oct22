@@ -1,6 +1,6 @@
 ---
 title: "Survey"
-slug: -survey
+slug: Building Programs with Python-survey
 layout: page
 ---
 
