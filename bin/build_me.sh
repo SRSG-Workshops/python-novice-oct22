@@ -10,6 +10,10 @@ if ls _episodes_rmd/*.Rmd >/dev/null 2>&1; then
   perl -0777pi -e "s/(?<!\n)\{: .challenge\}/\n\{: .challenge\}/g" ./_episodes/*.md
 fi
 
+echo 'currant working dir'
+pwd
+echo '\n'
+
 # Build Python
 echo 'Making favicons'
 python3 bin/make_favicons.py

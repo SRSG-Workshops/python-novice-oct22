@@ -144,16 +144,16 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         if "99-" in file:
             with open(f"{filepath}", 'r') as fp:
                 data = fp.readlines()
-            try:
-                ix = data.index("slug: lesson-survey\n")
-                if lesson_name == '':
-                    data[ix] = f"slug: {lesson_title}-survey\n"
-                else:
-                    data[ix] = f"slug: {lesson_name}-survey\n"
-                with open(f"{filepath}", 'w') as fp:
-                    fp.writelines(data)
-            except ValueError as e:
-                print(f"No survey markdown found, caught: {e}\n continuing")
+                try:
+                    ix = data.index("slug: lesson-survey\n")
+                    if lesson_name == '':
+                        data[ix] = f"slug: {lesson_title}-survey\n"
+                    else:
+                        data[ix] = f"slug: {lesson_name}-survey\n"
+                    with open(f"{filepath}", 'w') as fp:
+                        fp.writelines(data)
+                except ValueError as e:
+                    print(f"No survey markdown found, caught: {e}\n continuing")
         elif "00-" in file and rename_files:
             if file != "00-schedule.md":
                 filepath.rename(f"{containing_directory}/{new_file_name}")
