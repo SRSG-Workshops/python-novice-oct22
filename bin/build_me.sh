@@ -11,8 +11,11 @@ if ls _episodes_rmd/*.Rmd >/dev/null 2>&1; then
 fi
 
 # Build Python
+echo 'Making favicons'
 python3 bin/make_favicons.py
+echo 'Making schedules'
 python3 bin/get_schedules.py
+echo 'Making setup'
 python3 bin/get_setup.py
 
 

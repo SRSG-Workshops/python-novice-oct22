@@ -187,7 +187,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         html += "</div>"
         p = Path("_includes/rsg/")
         p.mkdir(parents=True, exist_ok=True)
-        with open("_includes/rsg/schedule.html", "x") as fp:
+        with open("_includes/rsg/schedule.html", "w") as fp:
             fp.write(bs(html, "html.parser").prettify())
 
 
