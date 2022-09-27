@@ -165,7 +165,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         elif "00-" in file and rename_files:
             if file != "00-schedule.md":
                 filepath.rename(f"{containing_directory}/{new_file_name}")
-        elif rename_files:
+        else:
             filepath.rename(f"{containing_directory}/{new_file_name}")
 
     if website_kind != 'lesson':
@@ -297,7 +297,6 @@ def main():
             repo = git.Repo(".", search_parent_directories=True)
             remote = repo.remote("origin").url
             lesson_name = remote.split('/')[-1][:-4]
-
 
         if website_kind == 'workshop':
             if website_delivery == 'dated':
