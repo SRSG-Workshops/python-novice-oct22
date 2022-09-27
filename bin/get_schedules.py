@@ -12,6 +12,7 @@ import datetime
 import yaml
 import math
 import pandas
+import git
 import glob
 import textwrap
 from bs4 import BeautifulSoup as bs
@@ -164,7 +165,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         elif "00-" in file and rename_files:
             if file != "00-schedule.md":
                 filepath.rename(f"{containing_directory}/{new_file_name}")
-        else:
+        elif rename_files:
             filepath.rename(f"{containing_directory}/{new_file_name}")
 
     if website_kind != 'lesson':
@@ -291,6 +292,12 @@ def main():
         lesson_dates = lesson.get("date", None)             # can be a list
         lesson_starts = lesson.get("start-time", None)      # can be a list
         lesson_order = lesson.get("order", None)
+
+        if lesson_name is None:
+            repo = git.Repo(".", search_parent_directories=True)
+            remote = repo.remote("origin").url
+            lesson_name = remote.split('/')[-1][:-4]
+
 
         if website_kind == 'workshop':
             if website_delivery == 'dated':
