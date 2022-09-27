@@ -1,6 +1,6 @@
 ---
 title: "Survey"
-slug: None-survey
+slug: python-no-survey
 layout: page
 ---
 

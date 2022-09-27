@@ -1,6 +1,7 @@
 PyYAML
 beautifulsoup4
 git_root
+GitPython
 pandas
 html5lib
 python-dateutil
