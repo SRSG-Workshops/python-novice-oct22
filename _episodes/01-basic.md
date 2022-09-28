@@ -5,17 +5,12 @@ slug: python-novice-python-basics
 minutes: 15
 teaching: 15
 exercises: 0
+objectives:
+- Introduction to running the Python interpreter
+- Introduction to Python variables
+- Creating and Assigning values to variables
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Introduction to running the Python interpreter
-> *   Introduction to Python variables
-> *   Creating and Assigning values to variables
-> 
-> {: .objectives}
-
 
 ## Running the Python interpreter
 

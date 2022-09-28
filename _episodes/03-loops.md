@@ -5,18 +5,15 @@ slug: python-novice-repeating-actions-using-loops
 minutes: 15
 teaching: 15
 exercises: 0
+objectives:
+- Write for loops to repeat simple calculations.
+- Build a basic Python script and run it.
+- Track changes to a loop variable as the loop runs.
+- Track changes to other variables as they are updated by a for loop.
+- Write as basic Python script that uses loops
+keypoints:
 ---
 
-
-> ## Learning Objectives
->
-> *   Write for loops to repeat simple calculations.
-> *   Build a basic Python script and run it.
-> *   Track changes to a loop variable as the loop runs.
-> *   Track changes to other variables as they are updated by a for loop.
-> *   Write as basic Python script that uses loops
-> 
-> {: .objectives}
 
 ### Using loops to repeat things
 

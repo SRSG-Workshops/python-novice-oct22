@@ -5,20 +5,15 @@ slug: python-novice-modularising-your-code-using-functions
 minutes: 15
 teaching: 15
 exercises: 0
+objectives:
+- Define a function that takes parameters.
+- Return a value from a function.
+- Understand the scope of function variables and parameters.
+- Documenting a function.
+- Understand why we should divide programs into small, single-purpose functions.
+- Define and use a module that contains functions.
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Define a function that takes parameters.
-> *   Return a value from a function.
-> *   Understand the scope of function variables and parameters.
-> *   Documenting a function.
-> *   Understand why we should divide programs into small, single-purpose
->     functions.
-> *   Define and use a module that contains functions.
->
-> {: .objectives}
 
 At this point, we've written some scripts to do various things, including one to
 loop through a data file and output its contents.

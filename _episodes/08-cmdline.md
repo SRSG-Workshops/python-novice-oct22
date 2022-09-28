@@ -5,16 +5,13 @@ slug: python-novice-command-line-programs
 minutes: 10
 teaching: 10
 exercises: 0
+objectives:
+- Use the values of command-line arguments in a program.
+- Handle flags and files separately in a command-line program.
+- Read data from standard input in a program so that it can be used in a pipeline.
+keypoints:
 ---
 
-
-> ## Learning Objectives
->
-> *   Use the values of command-line arguments in a program.
-> *   Handle flags and files separately in a command-line program.
-> *   Read data from standard input in a program so that it can be used in a pipeline.
-> 
-> {: .objectives}
 
 At some point we may want to use our program in a pipeline
 or run it in a shell script to process thousands of data files. Our climate

@@ -5,16 +5,12 @@ slug: python-novice-handling-errors
 minutes: 30
 teaching: 30
 exercises: 0
+objectives:
+- Be able to read and understand how Python reports errors through tracebacks
+- Understand how and why errors occur in Python, and common types of errors
+- Use error handling mechanisms to detect problems and respond to them
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Be able to read and understand how Python reports errors through tracebacks
-> *   Understand how and why errors occur in Python, and common types of errors
-> *   Use error handling mechanisms to detect problems and respond to them
-> 
-> {: .objectives}
 
 Every programmer encounters errors,
 both those who are just beginning,
