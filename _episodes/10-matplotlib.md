@@ -5,17 +5,12 @@ slug: python-novice-data-visualisation
 minutes: 5
 teaching: 5
 exercises: 0
+objectives:
+- Displaying simple graphs
+- Plotting data using matplotlib library
+- Analysing data from multiple files
+keypoints:
 ---
-
-> ## Learning Objectives
->
-> *  Displaying simple graphs
-> *  Plotting data using matplotlib library
-> *  Analysing data from multiple files
-> 
-> 
-{: .objectives}
-
 
 The mathematician Richard Hamming once said,
 "The purpose of computing is insight, not numbers,"

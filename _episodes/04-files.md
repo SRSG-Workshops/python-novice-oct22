@@ -5,18 +5,13 @@ slug: python-novice-processing-data-files
 minutes: 15
 teaching: 15
 exercises: 0
+objectives:
+- Write a script to open a data file and print out its contents.
+- Perform some operations on strings to extract desired data from it.
+- Understand the basics of how Python handles objects.
+- Understand good practices of how and when to write a code comment.
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Write a script to open a data file and print out its contents.
-> *   Perform some operations on strings to extract desired data from it.
-> *   Understand the basics of how Python handles objects.
-> *   Understand good practices of how and when to write a code comment.
-> 
-> 
-{: .objectives}
 
 
 So far we've seen how to use and manipulate variables, and how to use loops in a script to process strings.

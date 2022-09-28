@@ -5,19 +5,14 @@ slug: python-novice-reading-and-analysing-patient-data-using-libraries
 minutes: 20
 teaching: 20
 exercises: 0
+objectives:
+- Explain what a library is, and what libraries are used for.
+- Load a Python library and use the things it contains.
+- Read tabular data from a file.
+- Select individual values and subsections from data.
+- Perform operations on arrays of data.
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Explain what a library is, and what libraries are used for.
-> *   Load a Python library and use the things it contains.
-> *   Read tabular data from a file.
-> *   Select individual values and subsections from data.
-> *   Perform operations on arrays of data.
-> 
-> 
-{: .objectives}
 
 
 This lesson presents an end-to-end scientific Python example, from analysing data (using a library), to visualisation (using a library).

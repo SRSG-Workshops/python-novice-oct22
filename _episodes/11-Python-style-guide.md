@@ -5,15 +5,10 @@ slug: python-novice-python-style-guide
 minutes: 5
 teaching: 5
 exercises: 0
+objectives:
+- Python coding conventions
+keypoints:
 ---
-
-> ## Learning Objectives
->
-> * Python coding conventions
-> 
-> 
-{: .objectives}
-
 
 This is taken from [PEP-008: Python Style Guide](https://www.python.org/dev/peps/pep-0008/).
 It is a semi-official guide to Python coding conventions.

@@ -5,16 +5,11 @@ slug: python-novice-arrays-lists-etc
 minutes: 15
 teaching: 15
 exercises: 0
+objectives:
+- Lists and Arrays in Python
+- Indexing and slicing
+keypoints:
 ---
-
-
-> ## Learning Objectives
->
-> *   Lists and Arrays in Python
-> *   Indexing and slicing
-> 
-> 
-{: .objectives}
 
 
 ### Arrays in Python
