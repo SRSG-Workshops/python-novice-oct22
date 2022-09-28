@@ -5,11 +5,16 @@ slug: python-novice-python-basics
 minutes: 15
 teaching: 15
 exercises: 0
+questions:
+- How do I start the Python interpreter?
+- What is a variable?
 objectives:
 - Introduction to running the Python interpreter
 - Introduction to Python variables
 - Creating and Assigning values to variables
 keypoints:
+- Start the python interpreter by typing `python` in the shell.
+- Variables are named memory locations, they are used to access data.
 ---
 
 ## Running the Python interpreter
