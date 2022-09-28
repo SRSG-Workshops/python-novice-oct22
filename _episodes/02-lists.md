@@ -5,10 +5,18 @@ slug: python-novice-arrays-lists-etc
 minutes: 15
 teaching: 15
 exercises: 0
+questions:
+- What is a list?
+- How do I access values in a list?
+- How to select a range of values from a list?
 objectives:
 - Lists and Arrays in Python
 - Indexing and slicing
 keypoints:
+- A list is an ordered collection of items of any type.
+- Values in the list can be accessed using their index in square brackets e.g. my_list\[ix\]
+- Lists can be manipulated in place using attribute functions e.g. my_list.reverse()
+- Ranges of values in a list can be obtained via slicing e.g. mylist\[start:stop\]
 ---
 
 
