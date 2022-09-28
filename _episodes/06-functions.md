@@ -250,7 +250,7 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > >
 > > multiply_by_10(2)
 > > multiply_by_10(8)
->
+> >
 > > print(k)
 > > ~~~
 > > 
@@ -260,7 +260,6 @@ And when we run it again --- which we most definitely should, to make sure it's 
 > 1. 20
 > 2. 80
 > 3. 0
->
 >
 >
 > > ## Solution
