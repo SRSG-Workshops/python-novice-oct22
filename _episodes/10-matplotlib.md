@@ -172,6 +172,7 @@ print(glob.glob('*.html'))
 ~~~
 {: .python}
 
+
 ~~~
 ['01-numpy.html', '02-loop.html', '03-lists.html', '04-files.html', '05-cond.html', '06-func.html', '07-errors.html', '08-defensive.html', '09-debugging.html', '10-cmdline.html', 'index.html', 'LICENSE.html', 'instructors.html', 'README.html', 'discussion.html', 'reference.html']
 ~~~
@@ -186,7 +187,7 @@ print(glob.glob('*.html'))
 > > ~~~
 > > {: . python}
 > 
-> {: .challange}
+> {: .challenge}
 
 As these examples show,
 `glob.glob`'s result is a list of strings,

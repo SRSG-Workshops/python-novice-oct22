@@ -382,16 +382,13 @@ so we should always use it when we can.
 > Using `range`,
 > write a loop to print the first 3 natural numbers:
 >
->
->
-> ~~~
-> 1
-> 2
-> 3
-> ~~~
-> {: .python}
+> > ~~~
+> > 1
+> > 2
+> > 3
+> > ~~~
+> > {: .python}
 > 
->
 > > ## Solution
 > > > ~~~
 > > > for i in range(1, 4):
@@ -449,10 +446,24 @@ so we should always use it when we can.
 > > print(5 ** 3)
 > > 125
 > > ~~~
-> >  {: .python}
+> > {: .python}
 >
 > Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
 >
+> > > ~~~
+> > > value = 5
+> > > exponent = 3
+> > > result = 1
+> > > for i in range(exponent):
+> > >     result = result * value
+> > > print(result)
+> > > ~~~
+> > > {: .python}
+> > 
+> > This solution is inefficient in terms of number of variables created and times looped can you improve it?
+> >
+> > {: .solution}
+> 
 > {: .challenge}
 
 
