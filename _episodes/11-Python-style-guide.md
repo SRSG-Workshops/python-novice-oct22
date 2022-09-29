@@ -12,6 +12,7 @@ keypoints:
 - Pep8 provides a guide for styling your python code.
 ---
 
+
 This is taken from [PEP-008: Python Style Guide](https://www.python.org/dev/peps/pep-0008/).
 It is a semi-official guide to Python coding conventions.
 

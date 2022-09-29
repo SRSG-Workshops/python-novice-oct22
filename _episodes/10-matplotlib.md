@@ -17,6 +17,7 @@ keypoints:
 publication.
 ---
 
+
 The mathematician Richard Hamming once said,
 "The purpose of computing is insight, not numbers,"
 and the best way to develop insight is often to visualize data.
