@@ -13,8 +13,7 @@ objectives:
 - Analysing data from multiple files
 keypoints:
 - We can use `matplotlib` to create and manipulate a wide variety of plots in Python.
-- Once a plot has been made we can use matplotlib's function `savefig` to output it in formats appropriate for 
-publication.
+- Once a plot has been made we can use matplotlib's function `savefig` to output it in formats appropriate for publication.
 ---
 
 
