@@ -5,12 +5,17 @@ slug: python-novice-processing-data-files
 minutes: 15
 teaching: 15
 exercises: 0
+questions:
+- How do I open files?
+- How do I get data out of text?
 objectives:
 - Write a script to open a data file and print out its contents.
 - Perform some operations on strings to extract desired data from it.
 - Understand the basics of how Python handles objects.
 - Understand good practices of how and when to write a code comment.
 keypoints:
+- `open` is a python function that lets us read `r` or write `z ` to files by creating a file handler.
+- We can use string operations such as `line.split(',')` to process data in files.
 ---
 
 

@@ -5,11 +5,18 @@ slug: python-novice-command-line-programs
 minutes: 10
 teaching: 10
 exercises: 0
+questions:
+- How can I run a program from the command line?
+- Can I tell the program to use different inputs from the command line?
+- Can I use a python program in a command line pipeline?
 objectives:
 - Use the values of command-line arguments in a program.
 - Handle flags and files separately in a command-line program.
 - Read data from standard input in a program so that it can be used in a pipeline.
 keypoints:
+- Python uses the `sys` library to acess command line arguments. `sys.argv` is a list of command line arguments.
+- Python program outputs can be used in a pipeline, **however**, due to the way python works we need to use the `signal`
+library to make sure it handles piping output correctly.
 ---
 
 

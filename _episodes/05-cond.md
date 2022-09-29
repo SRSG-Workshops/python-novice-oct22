@@ -5,11 +5,16 @@ slug: python-novice-making-choices
 minutes: 15
 teaching: 15
 exercises: 0
+questions:
+- How do I perform logical operations in Python?
 objectives:
 - Write conditional statements including `if`, `elif`, and `else` branches.
 - Evaluate expressions containing `and` and `or`.
-- Use conditionals to conditionally process input data
+- Use conditionals to conditionally process input data.
 keypoints:
+- We can use logical operations to change the behavior of our code when it meets certain conditions.
+- Using if, elif, and else we can check conditions and add a branch that runs if none of the conditions are met.
+- We can combine conditions using `and `and `or` to make more complicated logical statements.
 ---
 
 So what if we want to do something that's dependent on whether a given condition is true? In this lesson, we'll learn how to write code that runs only when certain conditions are true.

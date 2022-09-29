@@ -5,6 +5,10 @@ slug: python-novice-modularising-your-code-using-functions
 minutes: 15
 teaching: 15
 exercises: 0
+questions:
+- What is a function?
+- Why would I want to use a function?
+- Where should I put my functions?
 objectives:
 - Define a function that takes parameters.
 - Return a value from a function.
@@ -13,6 +17,10 @@ objectives:
 - Understand why we should divide programs into small, single-purpose functions.
 - Define and use a module that contains functions.
 keypoints:
+- A function is created using the `def` keyword.
+- Functions take variables that are specified in the function definition and use the `return` keyword to specify 
+their output.
+- We can use a module to keep our functions separate to the main body of our code to improve code readability.
 ---
 
 At this point, we've written some scripts to do various things, including one to

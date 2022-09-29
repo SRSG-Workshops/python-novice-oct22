@@ -5,11 +5,15 @@ slug: python-novice-handling-errors
 minutes: 30
 teaching: 30
 exercises: 0
+questions:
+- How can I use an error to understand where my code stopped working?
+- What types of errors are there in Python?
 objectives:
 - Be able to read and understand how Python reports errors through tracebacks
 - Understand how and why errors occur in Python, and common types of errors
-- Use error handling mechanisms to detect problems and respond to them
 keypoints:
+- Python has built in error names that give a hint to the type of problem you are looking for.
+- We can use the traceback to find which bit of the code threw an error.
 ---
 
 Every programmer encounters errors,
