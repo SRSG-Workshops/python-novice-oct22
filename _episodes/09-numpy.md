@@ -2,9 +2,9 @@
 # layout: page
 title: Reading and analysing Patient data using libraries
 slug: python-novice-reading-and-analysing-patient-data-using-libraries
-minutes: 20
+minutes: 25
 teaching: 20
-exercises: 0
+exercises: 5
 questions:
 - I work mostly with numerical data are there better methods than strings and lists?
 - I've heard python can be slow when working with big data is there anything I can do about that?

@@ -2,9 +2,9 @@
 # layout: page
 title: Modularising your code using functions
 slug: python-novice-modularising-your-code-using-functions
-minutes: 15
+minutes: 35
 teaching: 15
-exercises: 0
+exercises: 20
 questions:
 - What is a function?
 - Why would I want to use a function?

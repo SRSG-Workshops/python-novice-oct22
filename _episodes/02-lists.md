@@ -2,9 +2,9 @@
 # layout: episode
 title: Arrays, Lists etc
 slug: python-novice-arrays-lists-etc
-minutes: 15
+minutes: 30
 teaching: 15
-exercises: 0
+exercises: 15
 questions:
 - What is a list?
 - How do I access values in a list?

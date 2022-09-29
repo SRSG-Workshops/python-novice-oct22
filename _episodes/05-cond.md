@@ -2,9 +2,9 @@
 # layout: page
 title: Making choices
 slug: python-novice-making-choices
-minutes: 15
+minutes: 25
 teaching: 15
-exercises: 0
+exercises: 10
 questions:
 - How do I perform logical operations in Python?
 objectives:

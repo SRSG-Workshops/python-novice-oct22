@@ -2,9 +2,9 @@
 # layout: page
 title: Data Visualisation
 slug: python-novice-data-visualisation
-minutes: 5
-teaching: 5
-exercises: 0
+minutes: 25
+teaching: 10
+exercises: 15
 questions:
 - How can I visualise my data?
 - Can I use python to output plots for papers?

@@ -2,9 +2,9 @@
 # layout: page
 title: Repeating actions using loops
 slug: python-novice-repeating-actions-using-loops
-minutes: 15
+minutes: 30
 teaching: 15
-exercises: 0
+exercises: 15
 questions: 
 - How do I repeat a task?
 - What is a for loop?

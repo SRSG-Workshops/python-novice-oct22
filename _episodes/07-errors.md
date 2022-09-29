@@ -2,9 +2,9 @@
 # layout: page
 title: Handling Errors
 slug: python-novice-handling-errors
-minutes: 30
-teaching: 30
-exercises: 0
+minutes: 40
+teaching: 15
+exercises: 25
 questions:
 - How can I use an error to understand where my code stopped working?
 - What types of errors are there in Python?

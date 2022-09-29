@@ -2,8 +2,8 @@
 # layout: page
 title: Command-Line Programs
 slug: python-novice-command-line-programs
-minutes: 10
-teaching: 10
+minutes: 15
+teaching: 15
 exercises: 0
 questions:
 - How can I run a program from the command line?
