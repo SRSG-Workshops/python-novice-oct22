@@ -22,6 +22,7 @@ their output.
 - We can use a module to keep our functions separate to the main body of our code to improve code readability.
 ---
 
+
 At this point, we've written some scripts to do various things, including one to
 loop through a data file and output its contents.
 But it's not hard to imagine our code getting more complicated as we add

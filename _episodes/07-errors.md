@@ -15,6 +15,7 @@ keypoints:
 - We can use the traceback to find which bit of the code threw an error.
 ---
 
+
 Every programmer encounters errors,
 both those who are just beginning,
 and those who have been programming for years.

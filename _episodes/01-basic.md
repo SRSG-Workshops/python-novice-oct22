@@ -16,6 +16,7 @@ keypoints:
 - Variables are named memory locations, they are used to access data.
 ---
 
+
 ## Running the Python interpreter
 
 Normally, you write Python programs in a Python script, which is basically a file of Python commands you can run.

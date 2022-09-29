@@ -16,6 +16,7 @@ keypoints:
 - We can combine conditions using `and `and `or` to make more complicated logical statements.
 ---
 
+
 So what if we want to do something that's dependent on whether a given condition is true? In this lesson, we'll learn how to write code that runs only when certain conditions are true.
 
 ## Conditionals
