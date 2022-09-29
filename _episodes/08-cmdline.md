@@ -14,8 +14,7 @@ objectives:
 - Read data from standard input in a program so that it can be used in a pipeline.
 keypoints:
 - Python uses the `sys` library to acess command line arguments. `sys.argv` is a list of command line arguments.
-- Python program outputs can be used in a pipeline, **however**, due to the way python works we need to use the `signal`
-library to make sure it handles piping output correctly.
+- Python program outputs can be used in a pipeline, **however**, due to the way python works we need to use the `signal` library to make sure it handles piping output correctly.
 ---
 
 

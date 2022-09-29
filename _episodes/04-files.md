@@ -13,7 +13,7 @@ objectives:
 - Understand the basics of how Python handles objects.
 - Understand good practices of how and when to write a code comment.
 keypoints:
-- `open` is a python function that lets us read `r` or write `z ` to files by creating a file handler.
+- The python function `open` lets us read `r` or write `w` to files by creating a file handler.
 - We can use string operations such as `line.split(',')` to process data in files.
 ---
 

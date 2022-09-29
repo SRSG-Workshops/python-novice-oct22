@@ -17,8 +17,7 @@ objectives:
 - Define and use a module that contains functions.
 keypoints:
 - A function is created using the `def` keyword.
-- Functions take variables that are specified in the function definition and use the `return` keyword to specify 
-their output.
+- Functions take variables that are specified in the function definition and use the `return` keyword to specify their output.
 - We can use a module to keep our functions separate to the main body of our code to improve code readability.
 ---
 
