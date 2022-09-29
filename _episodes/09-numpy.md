@@ -1,5 +1,4 @@
 ---
-# layout: page
 title: Reading and analysing Patient data using libraries
 slug: python-novice-reading-and-analysing-patient-data-using-libraries
 minutes: 25

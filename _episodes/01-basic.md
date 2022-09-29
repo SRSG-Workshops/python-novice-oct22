@@ -1,5 +1,4 @@
 ---
-# layout: episode
 title: Python Basics
 slug: python-novice-python-basics
 minutes: 25

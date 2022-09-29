@@ -1,5 +1,4 @@
 ---
-# layout: page
 title: Repeating actions using loops
 slug: python-novice-repeating-actions-using-loops
 minutes: 30
@@ -477,6 +476,7 @@ so we should always use it when we can.
 >
 > Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
 >
+> > ## Solution
 > >
 > > > ~~~
 > > > value = 5
