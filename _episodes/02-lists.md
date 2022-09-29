@@ -1,5 +1,4 @@
 ---
-# layout: episode
 title: Arrays, Lists etc
 slug: python-novice-arrays-lists-etc
 minutes: 30

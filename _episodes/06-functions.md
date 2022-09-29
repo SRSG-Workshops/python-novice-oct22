@@ -1,5 +1,4 @@
 ---
-# layout: page
 title: Modularising your code using functions
 slug: python-novice-modularising-your-code-using-functions
 minutes: 35
