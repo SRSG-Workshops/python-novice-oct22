@@ -5,9 +5,12 @@ slug: python-novice-python-style-guide
 minutes: 5
 teaching: 5
 exercises: 0
+questions:
+- How do I write good-looking python?
 objectives:
 - Python coding conventions
 keypoints:
+- Pep8 provides a guide for styling your python code.
 ---
 
 This is taken from [PEP-008: Python Style Guide](https://www.python.org/dev/peps/pep-0008/).

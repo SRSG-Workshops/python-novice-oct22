@@ -2,14 +2,20 @@
 # layout: page
 title: Data Visualisation
 slug: python-novice-data-visualisation
-minutes: 5
-teaching: 5
-exercises: 0
+minutes: 25
+teaching: 10
+exercises: 15
+questions:
+- How can I visualise my data?
+- Can I use python to output plots for papers?
 objectives:
 - Displaying simple graphs
 - Plotting data using matplotlib library
 - Analysing data from multiple files
 keypoints:
+- We can use `matplotlib` to create and manipulate a wide variety of plots in Python.
+- Once a plot has been made we can use matplotlib's function `savefig` to output it in formats appropriate for 
+publication.
 ---
 
 The mathematician Richard Hamming once said,
@@ -180,6 +186,8 @@ print(glob.glob('*.html'))
 {: .output}
 
 
+> ## Glob and filetypes
+> 
 > Your output may have been different it depends on what folder you are in and what filetype you search for.
 > Try using different filetypes and see what you find eg.
 >

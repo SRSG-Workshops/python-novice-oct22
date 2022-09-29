@@ -2,9 +2,12 @@
 # layout: page
 title: Reading and analysing Patient data using libraries
 slug: python-novice-reading-and-analysing-patient-data-using-libraries
-minutes: 20
+minutes: 25
 teaching: 20
-exercises: 0
+exercises: 5
+questions:
+- I work mostly with numerical data are there better methods than strings and lists?
+- I've heard python can be slow when working with big data is there anything I can do about that?
 objectives:
 - Explain what a library is, and what libraries are used for.
 - Load a Python library and use the things it contains.
@@ -12,6 +15,9 @@ objectives:
 - Select individual values and subsections from data.
 - Perform operations on arrays of data.
 keypoints:
+- Python has many libraries that add to the core language to improve functionality in specific use cases.
+- Numpy is a **num**erical **py**thon library that makes working with vectors, matricies, or large data tables easier.
+- Numpy can be used to load datasets directly from CSV files bypassing Pythons built in file systems.
 ---
 
 

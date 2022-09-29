@@ -2,16 +2,22 @@
 # layout: page
 title: Repeating actions using loops
 slug: python-novice-repeating-actions-using-loops
-minutes: 15
+minutes: 30
 teaching: 15
-exercises: 0
+exercises: 15
+questions: 
+- How do I repeat a task?
+- What is a for loop?
+- How to iterate over a list?
+- How to iterate over a range of values?
 objectives:
 - Write for loops to repeat simple calculations.
 - Build a basic Python script and run it.
 - Track changes to a loop variable as the loop runs.
 - Track changes to other variables as they are updated by a for loop.
-- Write as basic Python script that uses loops
+- Write as basic Python script that uses loops.
 keypoints:
+- We can use the 'for in' syntax to loop over collections or generators.
 ---
 
 
@@ -471,6 +477,7 @@ so we should always use it when we can.
 >
 > Write a loop that calculates the same result as `5 ** 3` using multiplication (and without exponentiation).
 >
+> >
 > > > ~~~
 > > > value = 5
 > > > exponent = 3

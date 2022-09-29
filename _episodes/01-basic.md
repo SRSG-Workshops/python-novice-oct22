@@ -2,9 +2,9 @@
 # layout: episode
 title: Python Basics
 slug: python-novice-python-basics
-minutes: 15
+minutes: 25
 teaching: 15
-exercises: 0
+exercises: 10
 questions:
 - How do I start the Python interpreter?
 - What is a variable?
