@@ -81,6 +81,7 @@ cc_by_human: "https://creativecommons.org/licenses/by/4.0/"
 # order is critical
 setup_docs:
   - text_editor.md
+  - open_a_terminal.md
   - install_anaconda.md
   - download_python_data.md
 
